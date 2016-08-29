@@ -1,0 +1,127 @@
+/*!
+* Monitor content
+*/
+.h1_m
+    display block
+    padding-left 22px
+    margin 5px 0
+    line-height 1
+
+@media (min-width: 1660px)
+    .h1_m
+        float left
+
+.monitor-legend
+    list-style none
+    margin-left 22px
+    margin-right 0
+    padding-left 0
+    margin-bottom 5px
+    margin-top 5px
+
+@media (min-width: 1660px)
+    .monitor-legend
+        width 968px
+        margin-right 22px
+        margin-left auto
+
+.monitor-legend__item
+    display inline-block
+    position relative
+    padding-left 24px
+    margin-right 40px
+    font-family $myriad
+    font-size 17px
+    color #3c5c74
+    &:first-child
+        margin-left 0
+    &:before
+        position absolute
+        content ''
+        top 4px
+        left 0
+        width 14px
+        height 14px
+        border-radius 50%
+    &.gray
+        &:before
+            background-color #c4c4c4
+    &.green
+        &:before
+            background-color #41b550
+    &.yellow
+        &:before
+            background-color #fbc226
+    &.red
+        &:before
+            background-color #e15644
+
+@media (min-width: 1200px)
+    .monitor-legend__item
+        margin-left 84px
+        margin-right 0
+
+.monitor-charts
+    clear both
+    padding-left 8px
+    padding-right 8px
+
+.monitor-charts__wrap
+    display inline-block
+    width 100%
+    padding-left 16px
+    margin-bottom 14px
+
+.monitor-charts__item
+    height 348px
+    vertical-align top
+    border 2px solid transparent
+    border-radius 4px
+    overflow hidden
+    box-shadow 0 5px 10px 0 rgba(0, 0, 0, 0.1)
+    background-color white
+    transition .2s
+    &:hover
+        border-color #279bf2
+        box-shadow 0 16px 32px 0 rgba(0, 0, 0, 0.3)
+
+@media (min-width: 846px)
+    .monitor-charts__wrap
+        width 50%
+        margin-right -4px
+
+@media (min-width: 1194px)
+    .monitor-charts__wrap
+        width 33.3%
+
+@media (min-width: 1552px)
+    .monitor-charts__wrap
+        width 25%
+
+@media (min-width: 1910px)
+    .monitor-charts__wrap
+        width 20%
+
+.monitor-chart
+    width 334px
+    margin 0 auto
+
+.monitor-charts__name
+    min-height 74px
+    font-family $proxyR
+    font-size 16px
+    color #354052
+    border-bottom 1px solid #e6eaee
+    padding 7px 14px 6px 14px
+    .lnk
+        color #354052
+        text-decoration none
+        &:hover
+            text-decoration underline
+            color #136caf
+
+.monitor-chart__title
+    font-family $myriad
+    font-size 30px
+    text-align center
+

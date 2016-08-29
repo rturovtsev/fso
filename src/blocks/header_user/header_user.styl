@@ -1,0 +1,79 @@
+.header__user-panel
+    position absolute
+    top 0
+    right 0
+
+.header-user
+    display inline-block
+    vertical-align middle
+    margin-left 60px
+    height 70px
+    margin-right 4px
+    padding-top 10px
+
+@media (min-width: 360px)
+    .header-user
+        margin-left 66px
+        margin-right 17px
+
+
+.header-user__photo
+    display inline-block
+    float left
+    margin-left -60px
+    width 50px
+    height 50px
+    overflow hidden
+    border-radius 50%
+    text-decoration none
+    outline none
+
+    img
+        min-width 100%
+        min-height 100%
+        border 0
+
+@media (min-width: 360px)
+    .header-user__photo
+        margin-left -66px
+
+.header-user__photo:hover,
+.header-user__photo:focus
+    box-shadow 0 0 7px 0 rgba(4, 65, 111, 0.45)
+
+.header-user__name
+    font-family $myriad
+    display inline-block
+    white-space nowrap
+    margin-top 4px
+    color white
+    font-size 16px
+    text-decoration none
+
+    &:hover
+        text-decoration underline
+
+.header-user__post
+    font-family $myriad
+    display inline-block
+    white-space nowrap
+    color #0a65a9
+    font-size 14px
+    text-decoration none
+
+    &:hover
+        text-decoration underline
+
+.logout
+    text-decoration none
+    color white
+    font-size 26px
+    margin-right 4px
+    vertical-align middle
+
+    &:hover
+        text-shadow 0 0 1px white
+
+@media (min-width: 360px)
+    .logout
+        margin-right 12px

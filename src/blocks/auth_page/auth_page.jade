@@ -1,0 +1,25 @@
+.auth-bg
+    .auth-panel
+        span.auth-panel__logo
+        .auth-panel__base
+            .auth-panel__intro
+                | Система мониторинга показателей
+                br
+                |состояния национальной
+                br
+                |безопасности Российской Федерации
+            .auth-panel__form
+                // При ошибке валидации у формы должен быть класс error
+                form(action='')
+                    label
+                        span.auth-panel__label
+                            | Ваш логин
+                        input.fso-input(type='text')
+                    .auth-panel__error-txt.pull-right
+                        | не верный логин или пароль
+                    label
+                        span.auth-panel__label
+                            | Ваш пароль
+                        input.fso-input(type='password')
+                    button.mdl-button.mdl-js-button.mdl-js-ripple-effect
+                        | Войти

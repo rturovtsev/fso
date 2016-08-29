@@ -1,0 +1,13 @@
+.monitor-panel
+    for item, index in monitor_panel
+        .monitor-panel__item
+            .monitor-panel__txt
+                a(href='#{item.href}')
+                    |#{item.title}
+                    span.monitor-panel__year
+                        |#{item.year}
+            .monitor-panel__data
+                span.monitor-panel__num(class="#{item.color}")
+                    |#{item.num}
+                span.monitor-panel__reit(class="#{item.arrow}")
+                    |#{item.reit}

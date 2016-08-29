@@ -1,0 +1,9 @@
+.sidebar
+    ul.left-menu
+        for item, index in sidebar
+            li.left-menu__item(class= (index == current) ? "active" : "")
+                a.left-menu__lnk(href='#{item.href}')
+                    span.left-menu__icon
+                        i(class="#{item.icon}")
+                    span.left-menu__txt
+                        | #{item.title}

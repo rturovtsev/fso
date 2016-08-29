@@ -1,0 +1,224 @@
+h1.h1_m Стратегические национальные приоритеты
+ul.monitor-legend
+    li.monitor-legend__item.gray
+        | Не определено
+    li.monitor-legend__item.green
+        | Стабильная ситуация
+    li.monitor-legend__item.yellow
+        | Близкая к критической
+    li.monitor-legend__item.red
+        | Критическая ситуация
+
+// Данные для графиков
+script.
+    var monitorChartsData = [
+        {
+            id: "1",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 97
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 192
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 292
+            }]
+        }, {
+            id: "2",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 83
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 176
+            }, {
+                name: 'Критическая ситуация',
+                color: "#e15644",
+                lnk: "http://google.com",
+                y: 849
+            }]
+        }, {
+            id: "3",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 180
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 34
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 122
+            }, {
+                name: 'Критическая ситуация',
+                color: "#e15644",
+                lnk: "http://google.com",
+                y: 164
+            }]
+        }, {
+            id: "4",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 97
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 292
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 192
+            }]
+        }, {
+            id: "5",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 180
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 34
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 122
+            }, {
+                name: 'Критическая ситуация',
+                color: "#e15644",
+                lnk: "http://google.com",
+                y: 164
+            }]
+        }, {
+            id: "6",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 97
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 192
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 292
+            }]
+        }, {
+            id: "7",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 83
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 176
+            }, {
+                name: 'Критическая ситуация',
+                color: "#e15644",
+                lnk: "http://google.com",
+                y: 849
+            }]
+        }, {
+            id: "8",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 180
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 34
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 122
+            }, {
+                name: 'Критическая ситуация',
+                color: "#e15644",
+                lnk: "http://google.com",
+                y: 164
+            }]
+        }, {
+            id: "9",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 97
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 292
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 192
+            }]
+        }, {
+            id: "10",
+            data: [{
+                name: 'Не определено',
+                color: "#c4c4c4",
+                lnk: "http://google.com",
+                y: 180
+            }, {
+                name: 'Стабильная ситуация',
+                color: "#41b550",
+                lnk: "http://google.com",
+                y: 34
+            }, {
+                name: 'Близкая к критической',
+                color: "#fbc226",
+                lnk: "http://google.com",
+                y: 122
+            }, {
+                name: 'Критическая ситуация',
+                color: "#e15644",
+                lnk: "http://google.com",
+                y: 164
+            }]
+        }
+    ];
+
+.monitor-charts
+    for item, index in monitor_charts
+        .monitor-charts__wrap
+            .monitor-charts__item
+                .monitor-charts__name
+                    a.lnk(href='#{item.href}') #{item.title}
+                div(id="monitor-chart-#{index+1}").monitor-chart

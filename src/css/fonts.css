@@ -1,0 +1,79 @@
+@font-face {
+	font-family: 'NeoSansCyrRegular';
+	src: url('../fonts/NeoSansCyrRegular.eot');
+	src: url('../fonts/NeoSansCyrRegular.eot') format('embedded-opentype'),
+	url('../fonts/NeoSansCyrRegular.woff2') format('woff2'),
+	url('../fonts/NeoSansCyrRegular.woff') format('woff'),
+	url('../fonts/NeoSansCyrRegular.ttf') format('truetype'),
+	url('../fonts/NeoSansCyrRegular.svg#NeoSansCyrRegular') format('svg');
+}
+
+@font-face {
+	font-family: 'NeoSansCyrMedium';
+	src: url('../fonts/NeoSansCyrMedium.eot');
+	src: url('../fonts/NeoSansCyrMedium.eot') format('embedded-opentype'),
+	url('../fonts/NeoSansCyrMedium.woff2') format('woff2'),
+	url('../fonts/NeoSansCyrMedium.woff') format('woff'),
+	url('../fonts/NeoSansCyrMedium.ttf') format('truetype'),
+	url('../fonts/NeoSansCyrMedium.svg#NeoSansCyrMedium') format('svg');
+}
+
+@font-face {
+	font-family: 'ProximaNovaReg';
+	src: url('../fonts/ProximaNovaReg.eot');
+	src: url('../fonts/ProximaNovaReg.eot') format('embedded-opentype'),
+	url('../fonts/ProximaNovaReg.woff2') format('woff2'),
+	url('../fonts/ProximaNovaReg.woff') format('woff'),
+	url('../fonts/ProximaNovaReg.ttf') format('truetype'),
+	url('../fonts/ProximaNovaReg.svg#ProximaNovaReg') format('svg');
+}
+
+@font-face {
+	font-family: 'MyriadProRegular';
+	src: url('../fonts/MyriadProRegular.eot');
+	src: url('../fonts/MyriadProRegular.eot') format('embedded-opentype'),
+	url('../fonts/MyriadProRegular.woff2') format('woff2'),
+	url('../fonts/MyriadProRegular.woff') format('woff'),
+	url('../fonts/MyriadProRegular.ttf') format('truetype'),
+	url('../fonts/MyriadProRegular.svg#MyriadProRegular') format('svg');
+}
+
+@font-face {
+	font-family: 'fso-icomoon';
+	src:  url('../fonts/fso-icomoon.eot?wq0obz');
+	src:  url('../fonts/fso-icomoon.eot?wq0obz#iefix') format('embedded-opentype'),
+	url('../fonts/fso-icomoon.ttf?wq0obz') format('truetype'),
+	url('../fonts/fso-icomoon.woff?wq0obz') format('woff'),
+	url('../fonts/fso-icomoon.svg?wq0obz#fso-icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'fso-icomoon' !important;
+	display: inline-block;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-exit:before {
+	content: "\e900";
+}
+.icon-monitor:before {
+	content: "\e901";
+}
+.icon-news:before {
+	content: "\e902";
+}
+.icon-ranks:before {
+	content: "\e903";
+}

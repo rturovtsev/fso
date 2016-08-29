@@ -1,0 +1,101 @@
+@charset "utf-8"
+
+
+@import "./fonts.css"
+
+
+@import "vars"
+@import 'mixins'
+
+
+/*!
+* General
+*/
+*
+    box-sizing border-box
+
+body
+    background-color #ecf0f3
+    font-family $baseFont
+
+h1
+    font-family $neoR
+    font-size 26px
+
+header
+    position fixed
+    z-index 1
+    white-space nowrap
+    width 100%
+    top 0
+    left 0
+    height 70px
+    background #2da1f8
+    background linear-gradient(to bottom, #2da1f8 0%,#1992eb 100%)
+
+
+.content
+    padding-top 70px
+    padding-left 100px
+
+
+/*!
+* Helper class
+*/
+.pull-right
+    float right
+
+.pull-left
+    float left
+
+
+/*
+* Text fields
+*/
+.fso-input
+    border 1px solid rgb(217, 217, 217)
+    border-radius 4px
+    background-color rgb(248, 250, 252)
+    font-size 14px
+    color #354052;
+    padding-left 12px
+    height 36px
+    line-height 36px
+    outline 0
+
+
+.fso-input:focus
+.fso-input:active
+    border-color rgb(31, 84, 128)
+
+.error .fso-input
+    border-color #c53509
+    background-color #f1dee0
+
+
+
+/*
+* Buttons
+*/
+.mdl-button
+    font-family $neoR
+    border-radius 4px
+    background-color rgb(31, 84, 128)
+    color white
+    height 40px
+    line-height 40px
+    text-transform initial
+    font-size 16px
+    font-weight normal
+    padding 0 38px
+
+.mdl-button:hover
+.mdl-button:focus
+.mdl-button:active
+    background-color #04416f
+    box-shadow 0 3px 7px 0 rgba(4, 65, 111, 0.35)
+
+
+
+
+@import "../blocks/**/*.styl"

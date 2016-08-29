@@ -1,0 +1,23 @@
+{
+  "name": "vendor",
+  "homepage": "https://github.com/sugrob69/gulp_template",
+  "authors": [
+    "Sugrob69 <sugrob.boid@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "3.*",
+    "malihu-custom-scrollbar-plugin": "*",
+    "highcharts": "^4.2.6"
+  }
+}

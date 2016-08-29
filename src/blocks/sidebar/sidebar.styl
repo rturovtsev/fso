@@ -1,0 +1,98 @@
+/*!
+* Sidebar
+*/
+.sidebar
+    position fixed
+    top 0
+    left 0
+    width 100px
+    height 100%
+    background-color #1d2531
+    padding-top 70px
+
+
+/*!
+* Left menu
+*/
+.left-menu
+    list-style none
+    padding 0
+    margin-top 20px
+
+.left-menu__item
+    position relative
+    margin-bottom 34px
+    text-align center
+    &.active
+        &:before
+            position absolute
+            top 30px
+            left 0
+            content ''
+            width 0
+            height 0
+            border-top 3px solid transparent
+            border-left 3px solid #2ba0f6
+            border-bottom 3px solid transparent
+
+.left-menu__lnk
+    text-decoration none
+    outline none
+    display inline-block
+    color #9b9da0
+
+.left-menu__icon
+    display inline-block
+    width 60px
+    height 60px
+    border 3px solid rgb(45, 56, 72)
+    border-radius 50%
+    transition .3s
+    vertical-align middle
+    white-space nowrap
+    margin-bottom 10px
+    &:before
+        content ''
+        display inline-block
+        height inherit
+        min-height 100%
+        vertical-align middle
+    i
+        vertical-align middle
+        color #8e9298
+        transition .3s
+    .icon-monitor
+        font-size 40px
+        margin-left -4px
+        margin-top -2px
+    .icon-ranks
+        font-size 32px
+        margin-left -4px
+        margin-top -14px
+    .icon-news
+        font-size 26px
+        margin-left -4px
+        margin-top -8px
+
+.left-menu__txt
+    display block
+    font-family 'MyriadProRegular'
+    font-size 12px
+    line-height normal
+    transition .3s
+
+.left-menu__lnk:hover .left-menu__icon,
+.left-menu__lnk:hover .left-menu__txt,
+.left-menu__lnk:hover i
+    color white
+    border-color white
+
+.active
+    .left-menu__icon
+        border-color #2ba0f6
+        background-color #2ba0f6
+        i
+            color white
+    .left-menu__txt
+        color white
+
