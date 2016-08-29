@@ -1,0 +1,19 @@
+doctype html
+html
+    head
+        include ./templates/head.jade
+    body
+        - var current = 1;
+
+        header
+            include ./blocks/header_logo/header_logo
+            include ./blocks/header_site_name/header_site_name
+            include ./blocks/header_user/header_user
+
+        include ./blocks/sidebar/sidebar
+
+        .content
+            include ./blocks/indicators_page_content/indicators_page_content
+
+
+        include ./templates/scripts.jade

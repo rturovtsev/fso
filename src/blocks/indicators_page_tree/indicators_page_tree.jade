@@ -1,0 +1,32 @@
+.indicators-tree.open
+    .tree-slider
+
+    .tree__search
+        input.tree__input-search(placeholder="Поиск...")
+        span.icon-search.input-search__icon
+
+    .tree__filters
+        .tree__filter
+            .tree__filter-cont
+                select.select2(style="width: 100%;")
+                    option(value=0) Ответственный орган1
+                    option(value=1) Ответственный орган2
+        .tree__filter
+            .tree__filter-cont
+                select.select2(style="width: 100%;")
+                    option(value=0) Регион1
+                    option(value=1) Регион2
+        .tree__filter
+            .tree__filter-cont
+                select.select2(style="width: 100%;")
+                    option(value=0) Состояние1
+                    option(value=1) Состояние2
+    .tree-cont
+        .tree-controls
+            button(type="button").add-section.pull-left
+                span.icon-add1
+                |Добавить раздел
+
+            .viewed-tree
+
+        .tree-list

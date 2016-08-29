@@ -1,6 +1,7 @@
 $(document).ready(function() {
     makeMonitorCharts.init();
     addCustomScroll.init();
+    addCustomSelect.init();
 });
 
 
@@ -144,6 +145,26 @@ var addCustomScroll = {
             this.addCustomScrollYX();
             this.addCustomScrollX();
             this.addCustomScrollY();
+        }
+    }
+};
+
+
+var addCustomSelect = {
+    render: function(options) {
+        options = options || {};
+        options.language = options.language || {
+                "noResults": function () {
+                    return "Ничего не найдено";
+                }
+            };
+        options.minimumResultsForSearch = options.minimumResultsForSearch || "Infinity";
+
+        $('.select2').select2(options);
+    },
+    init: function() {
+        if ( typeof $.fn.select2 == 'function' ) {
+            this.render();
         }
     }
 };

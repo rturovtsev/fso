@@ -65,6 +65,30 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-save:before {
+	content: "\e904";
+}
+.icon-add1:before {
+	content: "\e905";
+}
+.icon-cansel:before {
+	content: "\e906";
+}
+.icon-search:before {
+	content: "\e907";
+}
+.icon-trash:before {
+	content: "\e908";
+}
+.icon-left:before {
+	content: "\e909";
+}
+.icon-right:before {
+	content: "\e90a";
+}
+.icon-down:before {
+	content: "\e90b";
+}
 .icon-exit:before {
 	content: "\e900";
 }

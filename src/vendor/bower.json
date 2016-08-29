@@ -18,6 +18,7 @@
   "dependencies": {
     "jquery": "3.*",
     "malihu-custom-scrollbar-plugin": "*",
-    "highcharts": "^4.2.6"
+    "highcharts": "^4.2.6",
+    "select2": "^4.0.3"
   }
 }
