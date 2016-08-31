@@ -2,6 +2,7 @@ $(document).ready(function() {
     makeMonitorCharts.init();
     addCustomScroll.init();
     addCustomSelect.init();
+    indicatorsTree.init();
 });
 
 
@@ -113,7 +114,7 @@ var addCustomScroll = {
     addCustomScrollYX: function() {
         $('.custom-scroll_yx').mCustomScrollbar({
             axis:"yx",
-            theme:"dark",
+            theme:"light-3",
             scrollInertia:100,
             advanced:{
                 updateOnContentResize: true
@@ -123,7 +124,7 @@ var addCustomScroll = {
     addCustomScrollY: function() {
         $('.custom-scroll_y').mCustomScrollbar({
             axis:"y",
-            theme:"dark",
+            theme:"light-3",
             scrollInertia:100,
             advanced:{
                 updateOnContentResize: true
@@ -133,7 +134,7 @@ var addCustomScroll = {
     addCustomScrollX: function() {
         $('.custom-scroll_x').mCustomScrollbar({
             axis:"x",
-            theme:"dark",
+            theme:"light-3",
             scrollInertia:100,
             advanced:{
                 updateOnContentResize: true
@@ -166,5 +167,28 @@ var addCustomSelect = {
         if ( typeof $.fn.select2 == 'function' ) {
             this.render();
         }
+    }
+};
+
+var indicatorsTree = {
+    init: function() {
+        if ($('#indicators-tree').length) {
+            this.event();
+        }
+    },
+    event: function() {
+        var $slider = $('#tree-slider'),
+            $cont = $('#indicators-tree'),
+            $right = $('#indicators-tree__right'),
+            $items = $('.tree-list__item');
+
+        $slider.on('click', function() {
+            $cont.toggleClass('open');
+            $right.toggleClass('tree_open');
+        });
+
+        $items.on('click', function() {
+            $(this).parent('.has-child').toggleClass('open');
+        })
     }
 };

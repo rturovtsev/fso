@@ -1,5 +1,27 @@
-.indicators-tree__right
+#indicators-tree__right.indicators-tree__right
     include ../indicators_page_tree/indicators_page_tree
 
     h1
         | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
+
+    include ../indicators_page_tabs/indicators_page_tabs
+
+    .indicators-editor
+        include ../indicators_page_table_head/indicators_page_table_head
+
+    table.indicators-table
+        tr
+            th(colspan="2")
+                |Направление национальной безопасности
+        tr
+            td.name
+                |Наименование показателя
+            td.value
+                textarea
+                    |Количество прояв
+        tr
+            td.name
+                | Стратегический национальный
+                | приоритет
+            td.value
+                | Государственная и общественная безопасность

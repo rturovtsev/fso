@@ -4,26 +4,32 @@
 .indicators-tree
     position: absolute
     width: 672px
-    height: 100%
+    min-height: 100%
     top: 0
-    left: 100px
-    padding: 80px 12px 0
+    left: -546px
+    padding: 80px 24px 0 12px
     background-color: #4b5461
     border-right 2px solid #4b5461
+    transition .3s
+    will-change transform
 
     &.open
         border-color #2da1f8
+        transform translateX(646px)
 
 .tree-slider
     position: absolute
     right: -11px
-    top: 50%
+    top: 50vh
     margin-top: -2px
     height: 74px
     width: 22px
     background-color: #2ca0f7
     border-radius 12px
     cursor: pointer
+
+    &:hover
+        background-color #1e8bdc
 
     &:before
         font-family: 'fso-icomoon' !important;
@@ -54,6 +60,10 @@
     border-radius 2px
     margin-bottom: 13px
 
+    &:hover
+    &:focus
+        box-shadow inset 0 0 2px #d9d9d9
+
 .tree__input-search
     width: 100%
     height: 41px
@@ -76,7 +86,7 @@
 
 .tree__filters
     white-space nowrap
-    margin-bottom: 16px
+    margin-bottom: 18px
 
 .tree__filter
     display: inline-block
@@ -93,6 +103,10 @@
         background-color #5d6571
         border-color: #d9d9d9
         outline: none
+
+    .select2-container--focus.select2-container--default .select2-selection--single
+    .select2-container--default .select2-selection--single:hover
+        box-shadow inset 0 0 3px #d9d9d9
 
     .select2-container--default .select2-selection--single .select2-selection__rendered
         color: #c6c6c6
@@ -125,25 +139,3 @@
     .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b
         &:before
             transform rotate(180deg)
-
-
-
-.tree-controls
-    border-bottom 1px solid #224260
-    overflow hidden
-    margin 0 -12px 15px
-    padding: 0 12px 8px
-
-.add-section
-    border none
-    outline none
-    background-color transparent
-    cursor: pointer
-    vertical-align middle
-    font-family $neoR
-    font-size 14px
-    color white
-
-    .icon-add1
-        font-size 16px
-        margin-right: 6px

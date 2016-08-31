@@ -1,5 +1,5 @@
-.indicators-tree.open
-    .tree-slider
+#indicators-tree.indicators-tree
+    .tree-slider#tree-slider
 
     .tree__search
         input.tree__input-search(placeholder="Поиск...")
@@ -21,12 +21,5 @@
                 select.select2(style="width: 100%;")
                     option(value=0) Состояние1
                     option(value=1) Состояние2
-    .tree-cont
-        .tree-controls
-            button(type="button").add-section.pull-left
-                span.icon-add1
-                |Добавить раздел
 
-            .viewed-tree
-
-        .tree-list
+    include ../tree_cont/tree_cont

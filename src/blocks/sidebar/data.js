@@ -1,12 +1,12 @@
 sidebar: [
     {
         title: "Монитор национальной безопасности",
-        href: "#",
+        href: "/",
         icon: "icon-monitor"
     },
     {
         title: "Показатели",
-        href: "#",
+        href: "/indicators.html",
         icon: "icon-ranks"
     },
     {

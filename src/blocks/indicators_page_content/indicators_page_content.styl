@@ -2,4 +2,53 @@
 * Indicators page
 */
 .indicators-tree__right
-    margin-left: 672px
+    margin-left: 26px
+    transition .3s
+    padding: 22px
+
+    &.tree_open
+        margin-left: 672px
+
+    h1
+        margin: 0
+        height: 93px
+        overflow hidden
+
+
+.indicators-editor
+    padding-top: 15px
+    margin-bottom: 14px
+
+.indicators-table
+    td
+        vertical-align middle
+        min-height 60px
+        padding-top: 4px
+        padding-bottom: 4px
+
+    .name
+        width: 33%
+        max-width: 33%
+        min-width: 33%
+        padding-left: 28px
+        padding-right: 14px
+        font-size 18px
+
+    .value
+        width: 67%
+        max-width: 67%
+        min-width: 67%
+        padding-left: 14px
+        padding-right: 10px
+
+    textarea
+        border-color: #d9d9d9;
+        height: 60px;
+        padding: 10px 14px;
+        margin: -4px -10px -10px -14px;
+        width: calc(100% + 25px);
+        font-family $proxyR
+        font-size 14px
+        color black
+        outline none
+        resize none

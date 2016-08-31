@@ -20,11 +20,12 @@ body
 
 h1
     font-family $neoR
-    font-size 26px
+    font-size 25px
+    color #1d2531
 
 header
     position fixed
-    z-index 1
+    z-index 2
     white-space nowrap
     width 100%
     top 0
@@ -32,6 +33,43 @@ header
     height 70px
     background #2da1f8
     background linear-gradient(to bottom, #2da1f8 0%,#1992eb 100%)
+
+table
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border 1px solid #d0d6de
+
+    th
+        background-color #b7bec7
+        color white
+        text-transform uppercase
+        font-family $proxyR
+        font-size 18px
+        vertical-align middle
+        text-align left
+        padding 8px 10px 8px 28px
+        font-weight normal
+
+    td
+        font-family $proxyR
+        font-size 14px
+        color #262626
+
+    tr:nth-of-type(even)
+        td:first-child
+            background-color #d0d6de
+        td:last-child
+            background-color #dbe1e8
+
+    tr:nth-of-type(odd)
+        td:first-child
+            background-color #dee3e8
+        td:last-child
+            background-color #eff3f6
+
 
 
 .content
@@ -47,6 +85,9 @@ header
 
 .pull-left
     float left
+
+.list-unstyled
+    list-style none
 
 
 /*
