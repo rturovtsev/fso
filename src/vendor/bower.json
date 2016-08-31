@@ -19,6 +19,7 @@
     "jquery": "3.*",
     "malihu-custom-scrollbar-plugin": "*",
     "highcharts": "^4.2.6",
-    "select2": "^4.0.3"
+    "select2": "^4.0.3",
+    "Sortable": "sortable.js#^1.4.2"
   }
 }
