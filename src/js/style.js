@@ -1,8 +1,17 @@
 $(document).ready(function() {
+    addCustomScroll();
+    addCustomScroll({
+        el: ".indicators-content__scrolled-cont",
+        theme: "dark-3",
+        autoHideScrollbar: true
+    });
     makeMonitorCharts.init();
-    addCustomScroll.init();
-    addCustomSelect.init();
     indicatorsTree.init();
+    addCustomSelect.init();
+    addCustomSelect.init({
+        el: '.select2-scrolled',
+        dropdownParent: $('.select2-scrolled').closest('.mCSB_container')
+    });
 });
 
 
@@ -110,63 +119,40 @@ var makeMonitorCharts = {
 };
 
 
-var addCustomScroll = {
-    addCustomScrollYX: function() {
-        $('.custom-scroll_yx').mCustomScrollbar({
-            axis:"yx",
-            theme:"light-3",
-            scrollInertia:100,
-            advanced:{
-                updateOnContentResize: true
-            }
-        });
-    },
-    addCustomScrollY: function() {
-        $('.custom-scroll_y').mCustomScrollbar({
-            axis:"y",
-            theme:"light-3",
-            scrollInertia:100,
-            advanced:{
-                updateOnContentResize: true
-            }
-        });
-    },
-    addCustomScrollX: function() {
-        $('.custom-scroll_x').mCustomScrollbar({
-            axis:"x",
-            theme:"light-3",
-            scrollInertia:100,
-            advanced:{
-                updateOnContentResize: true
-            }
-        });
-    },
-    init: function() {
-        if ( typeof $.fn.mCustomScrollbar == 'function' ) {
-            this.addCustomScrollYX();
-            this.addCustomScrollX();
-            this.addCustomScrollY();
-        }
-    }
-};
+function addCustomScroll(options) {
+    if ( typeof $.fn.mCustomScrollbar != 'function' ) return;
+
+    options = options || {};
+    options.el = options.el || '.custom-scroll_y';
+    options.axis = options.axis || "y";
+    options.theme = options.theme || "light-3";
+    options.scrollInertia = options.scrollInertia || 100;
+    options.advanced = options.advanced || {
+            updateOnContentResize: true
+        };
+
+    $(options.el).mCustomScrollbar(options);
+}
 
 
 var addCustomSelect = {
     render: function(options) {
+        $(options.el).select2(options);
+    },
+    init: function(options) {
+        if ( typeof $.fn.select2 != 'function' ) return;
+
         options = options || {};
+        options.el = options.el || '.select2';
         options.language = options.language || {
                 "noResults": function () {
                     return "Ничего не найдено";
                 }
             };
         options.minimumResultsForSearch = options.minimumResultsForSearch || "Infinity";
+        options.dropdownParent = options.dropdownParent || $('body');
 
-        $('.select2').select2(options);
-    },
-    init: function() {
-        if ( typeof $.fn.select2 == 'function' ) {
-            this.render();
-        }
+        this.render(options);
     }
 };
 
@@ -180,15 +166,71 @@ var indicatorsTree = {
         var $slider = $('#tree-slider'),
             $cont = $('#indicators-tree'),
             $right = $('#indicators-tree__right'),
-            $items = $('.tree-list__item');
+            $treeList = $('#tree-list'),
+            $items = $('.tree-list__item'),
+            $openBtn = $('#open_all_tree'),
+            $closeBtn = $('#close_all_tree'),
+            $dragRail = $('#viewed-tree__rail');
 
-        $slider.on('click', function() {
-            $cont.toggleClass('open');
-            $right.toggleClass('tree_open');
-        });
+        $slider.on('click', this.toggleTree.bind(this, $cont, $right, $treeList, $dragRail));
+        $items.on('click', this.toggleTreeItem.bind(this, $treeList, $dragRail));
+        $openBtn.on('click', this.openAllItem.bind(this, $treeList, $dragRail));
+        $closeBtn.on('click', this.closeAllItem.bind(this, $treeList, $dragRail));
 
-        $items.on('click', function() {
-            $(this).parent('.has-child').toggleClass('open');
-        })
+        this.dragAndDrop();
+    },
+    toggleTree: function($cont, $right, $treeList, $dragRail) {
+        $cont.toggleClass('open');
+        $right.toggleClass('tree_open');
+
+        if (!$cont.hasClass('open')) {
+            this.closeAllItem($treeList, $dragRail);
+        }
+    },
+    toggleTreeItem: function($treeList, $dragRail, e) {
+        e = e || window.event;
+
+        $(e.target).parent('.has-child').toggleClass('open');
+        this.chooseDragger($treeList, $dragRail);
+    },
+    openAllItem: function($treeList, $dragRail) {
+        $treeList.find('.has-child').addClass('open');
+        this.draggerOpen($dragRail);
+    },
+    closeAllItem: function($treeList, $dragRail) {
+        $treeList.find('.has-child').removeClass('open');
+        this.draggerClose($dragRail);
+    },
+    draggerOpen: function($dragRail) {
+        $dragRail.removeClass('close').addClass('open');
+    },
+    draggerClose: function($dragRail) {
+        $dragRail.removeClass('open').addClass('close');
+    },
+    draggerMiddle: function($dragRail) {
+        $dragRail.removeClass('open close');
+    },
+    chooseDragger: function($treeList, $dragRail) {
+        var items = $treeList.find('.has-child'),
+            itemsOpen = $treeList.find('.has-child.open');
+
+        if (!itemsOpen.length) {
+            this.draggerClose($dragRail);
+        } else if (items.length == itemsOpen.length) {
+            this.draggerOpen($dragRail);
+        } else {
+            this.draggerMiddle($dragRail);
+        }
+    },
+    dragAndDrop: function() {
+        if (typeof Sortable != 'function') return;
+
+        var uls = document.querySelectorAll(".tree-list ul"),
+            i = 0,
+            max = uls.length;
+
+        for (; i < max; i++) {
+            Sortable.create(uls[i], { group: "myGroup", animation: 150 });
+        }
     }
 };

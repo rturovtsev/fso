@@ -16,13 +16,49 @@
 
 
 .indicators-editor
-    padding-top: 15px
     margin-bottom: 14px
 
 .indicators-table
+    margin-bottom: 24px
+
+    &:last-child
+        margin-bottom: 0
+
+    .name__add-btn
+        text-align right
+
+    .btn
+        border none
+        background-color transparent
+        font-family $proxyR
+        font-size 14px
+        color #2399f1
+        border-radius 2px
+        cursor: pointer
+        vertical-align middle
+        margin-left: 6px
+
+        span
+            display inline-block
+            vertical-align middle
+            font-size: 20px;
+            margin-right: 4px;
+            margin-top: -1px;
+
+        &:hover
+        &:focus
+            background-color white
+            color #2399f1
+
+    a
+        text-decoration none
+
+        &:hover
+            text-decoration underline
+
     td
         vertical-align middle
-        min-height 60px
+        height 60px
         padding-top: 4px
         padding-bottom: 4px
 
@@ -41,14 +77,77 @@
         padding-left: 14px
         padding-right: 10px
 
-    textarea
-        border-color: #d9d9d9;
-        height: 60px;
-        padding: 10px 14px;
-        margin: -4px -10px -10px -14px;
-        width: calc(100% + 25px);
-        font-family $proxyR
-        font-size 14px
-        color black
+        &.edit
+            padding: 0
+            background-color white
+
+            textarea
+                border: 0;
+                background-color transparent
+                height: 60px;
+                padding: 10px 14px;
+                width: calc(100% + 25px);
+                font-family $proxyR
+                font-size 14px
+                color black
+                outline none
+                resize none
+
+    .lnk.pdf
+        padding-left: 26px
+        position: relative
+
+        &:before
+            position: absolute
+            left: 0
+            content ''
+            display inline-block
+            width: 16px
+            height: 16px
+            background url(../img/icon_pdf.png) 0 0 no-repeat
+
+        &:hover:before
+            text-decoration none
+
+    .lnk.word
+        padding-left: 26px
+        position: relative
+
+        &:before
+            position: absolute
+            left: 0
+            content ''
+            display inline-block
+            width: 16px
+            height: 16px
+            background url(../img/icon_word.png) 0 0 no-repeat
+
+        &:hover:before
+            text-decoration none
+
+    .ch-label
+    .r-label
+        margin-right: 36px
+
+        &:last-child
+            margin-right: 0
+
+
+
+.indicators-content__scrolled-cont
+    margin-top: 15px
+    max-height: calc(100vh - 255px);
+
+    .select2-container--default .select2-selection--single
         outline none
-        resize none
+        background-color transparent
+        border-color transparent
+        height: 60px;
+        margin: -10px -10px -10px -14px;
+
+    .select2-container--default .select2-selection--single .select2-selection__rendered
+        line-height: 60px
+
+    .select2-dropdown
+        margin-top: 10px
+        margin-left: -14px

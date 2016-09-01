@@ -68,6 +68,9 @@
 .icon-save:before {
 	content: "\e904";
 }
+.icon-add2:before {
+	content: "\e90d";
+}
 .icon-add1:before {
 	content: "\e905";
 }
@@ -88,6 +91,12 @@
 }
 .icon-down:before {
 	content: "\e90b";
+}
+.icon-delete:before {
+	content: "\e90e";
+}
+.icon-edit:before {
+	content: "\e90c";
 }
 .icon-exit:before {
 	content: "\e900";

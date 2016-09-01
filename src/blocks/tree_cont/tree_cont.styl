@@ -1,21 +1,79 @@
 /*!
 * Tree
 */
+.tree-cont
+    margin-right: -14px
+
+    .mCustomScrollBox
+        padding-right: 14px
+
+    .mCSB_inside>.mCSB_container
+        margin-right: 0
+
+    .mCSB_scrollTools
+        right: -1px
+
+    .mCSB_draggerContainer
+        visibility hidden
+
+.tree_open .tree-cont .mCSB_draggerContainer
+    visibility visible
+
+.tree__close-icon
+    position: absolute
+    top: 94px
+    right: 3px
+    width: 17px
+    height: 16px
+    transition .5s
+    opacity 1
+
+    &:before
+        position: absolute
+        left: 0
+        top: 0
+        width: 8px
+        height: 8px
+        display inline-block
+        content ''
+        border 2px solid #b7c0cd
+        border-radius 1px
+
+    &:after
+        position: absolute
+        right: 0
+        bottom: 0
+        width: 8px
+        height: 8px
+        display inline-block
+        content ''
+        border 2px solid #b7c0cd
+        border-radius 1px
+
+
+    .tree_open &
+        opacity 0
+
 .tree-controls
     border-bottom 1px solid #224260
     overflow hidden
-    margin 0 -24px 15px -12px
-    padding: 0 12px 5px
+    margin 0 -12px 15px -12px
+    padding: 0 26px 5px 12px
+    text-align right
 
 .add-section
+    text-align left
     border none
     outline none
     background-color transparent
     cursor: pointer
     vertical-align middle
     font-family $neoR
-    font-size 14px
+    font-size 12px
     color white
+
+    @media (min-width: 1200px)
+        font-size 14px
 
     &:hover
         color #279cf4
@@ -25,9 +83,65 @@
         margin-right: 6px
         vertical-align middle
 
+.viewed-tree
+    display inline-block
+    white-space nowrap
+    margin-top: 6px
+
+    @media (min-width: 1200px)
+        margin-top: 4px
+
+.viewed-tree__txt
+    display inline-block
+    vertical-align middle
+    font-family: $neoR
+    font-size 12px
+    color white
+    cursor: pointer
+
+    @media (min-width: 1200px)
+        font-size 14px
+
+    &:last-child
+        margin-left: 8px
+
+.viewed-tree__rail
+    display inline-block
+    vertical-align middle
+    position: relative
+    height: 8px
+    width: 40px
+    box-shadow: inset 0 1px 7px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 8px
+    border-radius 4px
+    background-color: rgb(48, 51, 55);
+
+.viewed-tree__dragger
+    position: absolute
+    display inline-block
+    width: 12px
+    height: 12px
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 3px 0 rgba(34, 34, 34, 0.2);
+    top: -2px
+    left: 50%
+    margin-left: -6px
+    transition .3s
+
+.viewed-tree__rail.open
+    .viewed-tree__dragger
+        left: 6px
+
+.viewed-tree__rail.close
+    .viewed-tree__dragger
+        left 34px
 
 .tree-scrolled-cont
     max-height calc(100vh - 250px)
+
+.no-results
+    color: white
 
 .tree-list
     ul
@@ -304,7 +418,7 @@
             display inline-block
             position: absolute
             top: 50%
-            left: -23px
+            left: -24px
             width: 9px
             height: 0
             border-top 1px solid #6f7681

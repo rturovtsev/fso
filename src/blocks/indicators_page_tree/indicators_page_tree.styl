@@ -3,10 +3,10 @@
 */
 .indicators-tree
     position: absolute
-    width: 672px
+    width: 400px
     min-height: 100%
     top: 0
-    left: -546px
+    left: -274px
     padding: 80px 24px 0 12px
     background-color: #4b5461
     border-right 2px solid #4b5461
@@ -15,7 +15,31 @@
 
     &.open
         border-color #2da1f8
-        transform translateX(646px)
+        transform translateX(374px)
+
+    @media (min-width: 1200px)
+        width: 460px
+        left: -334px
+
+        &.open
+            border-color #2da1f8
+            transform translateX(434px)
+
+    @media (min-width: 1600px)
+        width: 500px
+        left: -376px
+
+        &.open
+            border-color #2da1f8
+            transform translateX(474px)
+
+    @media (min-width: 1800px)
+        width: 672px
+        left: -546px
+
+        &.open
+            border-color #2da1f8
+            transform translateX(646px)
 
 .tree-slider
     position: absolute

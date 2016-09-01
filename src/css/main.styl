@@ -23,6 +23,9 @@ h1
     font-size 25px
     color #1d2531
 
+a
+    color #147ece
+
 header
     position fixed
     z-index 2
@@ -75,6 +78,60 @@ table
 .content
     padding-top 70px
     padding-left 100px
+
+.ch-label
+.r-label
+    display inline-block
+    cursor: pointer
+    outline none
+    vertical-align middle
+
+    .hide
+        display none
+
+    .sp-checkbox
+        vertical-align middle
+        position: relative
+        display inline-block
+        width: 16px
+        height: 16px
+        border 1px solid #86b3d8
+        background-color #9ecef4
+        border-radius 2px
+        margin-right: 5px
+        margin-top: -2px
+
+    .sp-radio
+        vertical-align middle
+        position: relative
+        display inline-block
+        width: 16px
+        height: 16px
+        border 1px solid #86b3d8
+        background-color #9ecef4
+        border-radius 50%px
+        margin-right: 5px
+        margin-top: -2px
+
+    [type="checkbox"]:checked + .sp-checkbox:before
+        position: absolute
+        content '✔'
+        font-size 13px
+        color #264964
+        font-weight: bold;
+        line-height: normal;
+        top: -2px;
+        left: 1px;
+
+    [type="radio"]:checked + .sp-radio:before
+        position: absolute
+        width: 10px
+        height: 10px
+        border-radius 50%px
+        content ''
+        background-color #264964
+        top: 2px;
+        left: 2px
 
 
 /*!
