@@ -7,15 +7,35 @@
     padding: 22px
 
     &.tree_open
-        margin-left: 672px
+        margin-left: 400px
+
+    @media (min-width: 1200px)
+        &.tree_open
+            margin-left: 460px
+
+    @media (min-width: 1600px)
+        &.tree_open
+            margin-left: 500px
+
+    @media (min-width: 1800px)
+        &.tree_open
+            margin-left: 672px
+
 
     h1
         margin: 0
         height: 93px
         overflow hidden
+        font-size 18px
 
+        @media (min-width: 1200px)
+            font-size 22px
+
+        @media (min-width: 1600px)
+            font-size 25px
 
 .indicators-editor
+    margin-top: 15px
     margin-bottom: 14px
 
 .indicators-table
@@ -47,8 +67,7 @@
 
         &:hover
         &:focus
-            background-color white
-            color #2399f1
+            color #1e8bdc
 
     a
         text-decoration none
@@ -93,6 +112,12 @@
                 outline none
                 resize none
 
+        &[contenteditable="true"]:focus
+        &[contenteditable="true"]:active
+            background-color white !important
+            outline none
+
+
     .lnk.pdf
         padding-left: 26px
         position: relative
@@ -125,6 +150,22 @@
         &:hover:before
             text-decoration none
 
+    .lnk.exel
+        padding-left: 26px
+        position: relative
+
+        &:before
+            position: absolute
+            left: 0
+            content ''
+            display inline-block
+            width: 16px
+            height: 16px
+            background url(../img/icon_exel.png) 0 0 no-repeat
+
+        &:hover:before
+            text-decoration none
+
     .ch-label
     .r-label
         margin-right: 36px
@@ -135,8 +176,17 @@
 
 
 .indicators-content__scrolled-cont
-    margin-top: 15px
     max-height: calc(100vh - 255px);
+
+    .mCSB_scrollTools
+        right: -2px
+
+    .mCSB_inside>.mCSB_container
+        margin-right: 0
+
+    .mCSB_scrollTools .mCSB_draggerContainer
+        top: 15px
+        bottom: 15px
 
     .select2-container--default .select2-selection--single
         outline none
@@ -151,3 +201,84 @@
     .select2-dropdown
         margin-top: 10px
         margin-left: -14px
+
+.indicators-table
+    .file-item
+        margin-bottom: 8px
+
+        &:last-child
+            margin-bottom: 0
+
+.ie-cont
+    position: relative
+    display inline-block
+    padding-right: 47px
+    padding-bottom: 35px
+    margin: 70px 0
+
+    table
+        width: auto
+        max-width 100%
+
+        td
+            height: auto
+            text-align center
+            background-color transparent !important
+            border 1px solid #8999b1
+            padding: 8px 16px;
+
+.ie-cont__right
+    position: absolute
+    top: 0
+    right: 0
+    width: 48px
+    bottom: 36px
+    border 1px solid #8999b1
+    background-color #cdd5df
+
+    .plus
+        display inline-block
+        position: absolute
+        top: 0
+        left: 0
+        width: 46px
+        height: 37px
+        border-bottom 1px solid #8999b1
+        font-size: 38px;
+        text-align: center;
+        line-height: 36px;
+        font-weight: bold;
+        color #6e737b
+        background-color #b7c1d0
+        cursor: pointer
+
+        &:hover
+            background-color #a2adbd;
+
+.ie-cont__down
+    position: absolute
+    left: 0
+    bottom: 0
+    right: 48px
+    height: 36px
+    border 1px solid #8999b1
+    background-color #cdd5df
+
+    .plus
+        display inline-block
+        position: absolute
+        bottom: 0
+        left: 0
+        width: 48px
+        height: 34px
+        border-right 1px solid #8999b1
+        font-size: 38px;
+        text-align: center;
+        line-height: 34px;
+        font-weight: bold;
+        color #6e737b
+        background-color #b7c1d0
+        cursor: pointer
+
+        &:hover
+            background-color #a2adbd;

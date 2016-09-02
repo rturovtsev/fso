@@ -1,4 +1,5 @@
 ul.indicators-tabs.list-unstyled
     for item, index in indicators_tabs
         li.indicators-tab(class= (index == indicator_tabs) ? "active" : "")
-            |#{item.title}
+            a.lnk(href="#{item.href}")
+                |#{item.title}

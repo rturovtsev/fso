@@ -6,6 +6,7 @@
     padding: 0 22px
     height: 30px
     border-bottom 1px solid #2198f0
+    overflow hidden
 
     .indicators-tab
         position: relative
@@ -16,10 +17,21 @@
         height: 29px
         cursor: pointer
         transition .2s
-        margin-right: 84px
+        margin-right: 16px;
+        font-size: 12px;
+        color #8999b1
+
+        .lnk
+            text-decoration none
+            color #8999b1
+            font-family $myriad
+
+        .tree_open &
+            font-size 11px
+            margin-right: 0
 
         &:last-child
-            margin-right: 0
+            margin-right: 0 !important
 
         &:after
             position: absolute
@@ -35,8 +47,35 @@
         &.active
             border-color #2198f0
 
+            .lnk
+                color: #2297f0
+
         &:hover
             color #2198f0
 
+            .lnk
+                color #2198f0
+
             &:after
                 height: 3px
+
+        @media (min-width: 1200px)
+            margin-right: 74px
+            font-size 14px
+
+            .tree_open &
+                font-size 12px
+                margin-right: 16px
+
+        @media (min-width: 1600px)
+            margin-right: 84px
+
+            .tree_open &
+                margin-right: 62px
+                font-size 14px
+
+        @media (min-width: 1800px)
+            font-size 18px
+
+            .tree_open &
+                margin-right: 66px

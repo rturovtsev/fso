@@ -1,0 +1,34 @@
+doctype html
+html
+    head
+        include ./templates/head.jade
+    body
+        - var current = 1;
+        - var indicator_tabs = 5;
+
+        header
+            include ./blocks/header_logo/header_logo
+            include ./blocks/header_site_name/header_site_name
+            include ./blocks/header_user/header_user
+
+        include ./blocks/sidebar/sidebar
+
+        .content
+            #indicators-tree__right.indicators-tree__right
+                include ./blocks/indicators_page_tree/indicators_page_tree
+
+                h1
+                    | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
+
+                include ./blocks/indicators_page_tabs/indicators_page_tabs
+
+                .indicators-content__scrolled-cont
+
+                    .indicators-editor
+                        include ./blocks/indicators_page_table_head/indicators_page_table_head
+
+
+
+
+
+        include ./templates/scripts.jade

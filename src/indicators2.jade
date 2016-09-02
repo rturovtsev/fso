@@ -1,0 +1,119 @@
+doctype html
+html
+    head
+        include ./templates/head.jade
+    body
+        - var current = 1;
+        - var indicator_tabs = 1;
+
+        header
+            include ./blocks/header_logo/header_logo
+            include ./blocks/header_site_name/header_site_name
+            include ./blocks/header_user/header_user
+
+        include ./blocks/sidebar/sidebar
+
+        .content
+            #indicators-tree__right.indicators-tree__right
+                include ./blocks/indicators_page_tree/indicators_page_tree
+
+                h1
+                    | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
+
+                include ./blocks/indicators_page_tabs/indicators_page_tabs
+
+                .indicators-content__scrolled-cont
+
+                    .indicators-editor
+                        include ./blocks/indicators_page_table_head/indicators_page_table_head
+
+                    table.indicators-table
+                        tr
+                            th(colspan="2")
+                                | Целевые значения
+                        tr
+                            td.name
+                                | Нормативно-правовые акты
+                                .name__add-btn
+                                    button(type="button").btn
+                                        span.icon-add2
+                                        | Добавить
+                            td.value
+                                div.file-item
+                                    a.lnk.word(href="#")
+                                        | Файл №1
+                                    button(type="button").btn
+                                        span.icon-delete
+                                        | Удалить
+                                div.file-item
+                                    a.lnk.word(href="#")
+                                        | Файл №1
+                                    button(type="button").btn
+                                        span.icon-delete
+                                        | Удалить
+                                div.file-item
+                                    a.lnk.pdf(href="#")
+                                        | Файл №1
+                                    button(type="button").btn
+                                        span.icon-delete
+                                        | Удалить
+                                div.file-item
+                                    a.lnk.word(href="#")
+                                        | Указ Президента РФ
+                                    button(type="button").btn
+                                        span.icon-delete
+                                        | Удалить
+
+
+                        tr
+                            td.name
+                                | Целевые значения показателя
+                            td.value
+                                .ie-cont
+                                    .ie-cont__right
+                                        .plus
+                                            |+
+                                    .ie-cont__down
+                                        .plus
+                                            |+
+                                    table
+                                        tr
+                                            td(contenteditable="true")
+                                                |Регион
+                                            td(contenteditable="true")
+                                                | 2016
+                                            td(contenteditable="true")
+                                                | 2017
+                                            td(contenteditable="true")
+                                                | 2018
+                                            td(contenteditable="true")
+                                                | 2019
+                                            td(contenteditable="true")
+                                                | 2020
+                                        tr
+                                            td(contenteditable="true")
+                                                | Российская Федерация
+                                            td(contenteditable="true")
+                                                strong
+                                                    |56
+                                                |%
+                                            td(contenteditable="true")
+                                                strong
+                                                    |59
+                                                |%
+                                            td(contenteditable="true")
+                                                strong
+                                                    |61
+                                                |%
+                                            td(contenteditable="true")
+                                                strong
+                                                    |63
+                                                |%
+                                            td(contenteditable="true")
+                                                strong
+                                                    |65
+                                                |%
+
+
+
+        include ./templates/scripts.jade

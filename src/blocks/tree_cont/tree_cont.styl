@@ -3,6 +3,8 @@
 */
 .tree-cont
     margin-right: -14px
+    opacity 0
+    transition .3s
 
     .mCustomScrollBox
         padding-right: 14px
@@ -13,11 +15,8 @@
     .mCSB_scrollTools
         right: -1px
 
-    .mCSB_draggerContainer
-        visibility hidden
-
-.tree_open .tree-cont .mCSB_draggerContainer
-    visibility visible
+.tree_open .tree-cont
+    opacity 1
 
 .tree__close-icon
     position: absolute
@@ -139,6 +138,7 @@
 
 .tree-scrolled-cont
     max-height calc(100vh - 250px)
+    overflow hidden
 
 .no-results
     color: white

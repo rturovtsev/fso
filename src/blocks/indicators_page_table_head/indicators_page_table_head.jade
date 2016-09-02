@@ -5,17 +5,28 @@ table.indicators-editor__table
         td.value
             .editor-btns.pull-right
                 //<button type="button" class="btn"><span class="btn-icon icon-edit"></span>Редактировать</button>
+                if indicator_tabs != 6
+                    button(type="button").btn
+                        span.btn-icon.icon-cansel
+                        |Отменить
 
-                button(type="button").btn
-                    span.btn-icon.icon-cansel
-                    |Отменить
+                    if indicator_tabs == 0
+                        button(type="button").btn
+                            span.btn-icon.icon-trash
+                            | Удалить
 
-                button(type="button").btn
-                    span.btn-icon.icon-trash
-                    | Удалить
+                    button(type="button").btn
+                        span.btn-icon.icon-save
+                        | Сохранить
 
-                button(type="button").btn
-                    span.btn-icon.icon-save
-                    | Сохранить
+                if indicator_tabs == 6
+                    button(type="button").btn
+                        span.btn-icon.icon-exel
+                        | Шаблон
+
+                    button(type="button").btn
+                        span.btn-icon.icon-exel
+                        | Загрузить
+
             span.sp-value
                 |Значение
