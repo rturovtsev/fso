@@ -80,8 +80,14 @@
 .icon-search:before {
 	content: "\e907";
 }
+.icon-dgr:before {
+	content: "\e90f";
+}
 .icon-trash:before {
 	content: "\e908";
+}
+.icon-full:before {
+	content: "\e910";
 }
 .icon-left:before {
 	content: "\e909";
@@ -94,6 +100,9 @@
 }
 .icon-delete:before {
 	content: "\e90e";
+}
+.icon-chart1:before {
+	content: "\e911";
 }
 .icon-edit:before {
 	content: "\e90c";

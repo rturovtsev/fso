@@ -1,0 +1,132 @@
+doctype html
+html
+    head
+        include ./templates/head.jade
+    body
+        - var current = 1;
+        - var indicator_tabs = 4;
+
+        header
+            include ./blocks/header_logo/header_logo
+            include ./blocks/header_site_name/header_site_name
+            include ./blocks/header_user/header_user
+
+        include ./blocks/sidebar/sidebar
+
+        .content
+            #indicators-tree__right.indicators-tree__right
+                include ./blocks/indicators_page_tree/indicators_page_tree
+
+                h1
+                    | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
+
+                include ./blocks/indicators_page_tabs/indicators_page_tabs
+
+                .indicators-content__scrolled-cont
+
+                    .indicators-editor
+                        include ./blocks/indicators_page_table_head/indicators_page_table_head
+
+                    .table-sections
+                        |Разрезы
+                        .table-sections__cont
+                            .section
+                                |Год
+                            .section
+                                | Виды деяельности
+                            .section
+                                | Вид данных
+                            .section
+                                | Территории
+                            .section
+                                | Период
+
+                    .table-wrapper
+                        .col50p
+                            .cols
+                                |Строки
+                                .cols_wrapper
+                        .col50p
+                            .cold
+                                |Столбцы
+                                .cold_wrapper
+
+                    .table-data
+                        table
+                            tbody
+                                tr
+                                    td.td1.text-left(rowspan='2') Регион
+                                    td.td1.text-left(rowspan='2') Наименование
+                                    td.td1.text-left(rowspan='2') Орган
+                                    td.td1(colspan='4') 2015 год
+                                    td.td1(colspan='2') 2015 год
+                                tr
+                                    td.td2 Значение
+                                    td.td2 Цель
+                                    td.td2 От
+                                    td.td2 До
+                                    td.td2 Значение
+                                    td.td2 Цель
+                                tr
+                                    td.td3.text-left Российская<br>Федерация
+                                    td.td3.text-left Наименование<br>отдела
+                                    td.td3.text-left ГРУПП
+                                    td 42
+                                    td 56
+                                    td 56
+                                    td 56
+                                    td 42
+                                    td 56
+                                tr
+                                    td.td3.text-left ЦФО
+                                    td.td3.text-left Окружной округ<br>Буравии
+                                    td.td3.text-left УПП
+                                    td 47
+                                    td 42
+                                    td 42
+                                    td 42
+                                    td 47
+                                    td 42
+                                tr
+                                    td.td3.text-left г. Москва
+                                    td.td3.text-left Наименование<br>отдела
+                                    td.td3.text-left ОПП
+                                    td 41
+                                    td 57
+                                    td 57
+                                    td 57
+                                    td 41
+                                    td 57
+                                tr
+                                    td.td3.text-left Российская<br>Федерация
+                                    td.td3.text-left Окружной округ<br>Буравии
+                                    td.td3.text-left ХОПП
+                                    td 38
+                                    td 42
+                                    td 42
+                                    td 42
+                                    td 38
+                                    td 42
+                                tr
+                                    td.td3.text-left ЦФО
+                                    td.td3.text-left Окружной округ<br>Буравии
+                                    td.td3.text-left ГРУПП
+                                    td 42
+                                    td 33
+                                    td 33
+                                    td 33
+                                    td 42
+                                    td 33
+                                tr
+                                    td.td3.text-left г. Москва
+                                    td.td3.text-left Окружной округ<br>Буравии
+                                    td.td3.text-left ГРУПП
+                                    td 42
+                                    td 42
+                                    td 42
+                                    td 42
+                                    td 42
+                                    td 42
+
+
+        include ./templates/scripts.jade

@@ -5,7 +5,7 @@ table.indicators-editor__table
         td.value
             .editor-btns.pull-right
                 //<button type="button" class="btn"><span class="btn-icon icon-edit"></span>Редактировать</button>
-                if indicator_tabs != 6
+                if indicator_tabs != 6 && indicator_tabs != 5
                     button(type="button").btn
                         span.btn-icon.icon-cansel
                         |Отменить
@@ -27,6 +27,11 @@ table.indicators-editor__table
                     button(type="button").btn
                         span.btn-icon.icon-exel
                         | Загрузить
+
+                if indicator_tabs == 5
+                    button(type="button").btn
+                        span.btn-icon.icon-chart1
+                        | Создать
 
             span.sp-value
                 |Значение

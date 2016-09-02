@@ -282,3 +282,218 @@
 
         &:hover
             background-color #a2adbd;
+
+.indicators-charts__item
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(230, 234, 238);
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 28px
+
+    &.green
+        border-bottom 2px solid #37b147
+
+    &.red
+        border-bottom 2px solid #fc5210
+
+    &.blue
+        border-bottom 2px solid #2198f0
+
+    &.gray
+        border-bottom 2px solid #c4c4c4
+
+    &.yellow
+        border-bottom 2px solid #fbc226
+
+    &:last-child
+        margin-bottom: 0
+
+.indicators-chart__top
+    border-bottom 1px solid #e6eaee
+    padding: 26px 40px
+    background-color #fafbfc
+    overflow hidden
+
+    .chart__top_btns
+        float right
+
+        .btn
+            display inline-block
+            border 0
+            background-color transparent
+            color #9a9b9d
+            font-size 20px
+            cursor: pointer
+            vertical-align middle
+
+            &:hover
+            &:focus
+                color #2297f0
+
+
+    .chart__top_name
+        position: relative
+        display inline-block
+        font-family $proxyR
+        font-size 14px
+        color #262626
+        text-transform uppercase
+        padding-left: 20px
+
+        &:before
+            position: absolute
+            top: 50%
+            margin-top: -4px
+            left: 0
+            display inline-block
+            content ''
+            width: 8px
+            height: 8px
+            border-radius 50%
+
+            .green &
+                background-color #37b147
+
+            .red &
+                background-color #fc5210
+
+            .blue &
+                background-color #2198f0
+
+            .gray &
+                background-color #c4c4c4
+
+            .yellow &
+                background-color #fbc226
+
+.indicators-chart__content
+    padding: 20px 40px
+    background-color white
+
+
+.table-sections
+    border-radius: 4px;
+    background-color: rgb(222, 224, 228);
+    padding: 14px
+    font-family $proxyR
+    font-size 18px
+    color #383d44
+    margin-bottom: 20px
+
+.table-sections__cont
+    margin-top: 10px
+
+    .section
+        cursor: pointer
+        display inline-block
+        background-color: rgb(137, 153, 177);
+        padding: 6px 12px
+        color white
+        margin-right: 12px
+        margin-bottom: 6px
+
+        &:last-child
+            margin-right: 0
+
+        &:hover
+        &:focus
+        &:active
+            background-color: #9aadca;
+
+.table-wrapper
+    margin-bottom: 30px
+
+    .col50p
+        vertical-align bottom
+
+        &:first-child
+            padding-right: 4px
+
+        &:last-child
+            padding-left: 4px
+
+    .cols
+    .cold
+        border-radius: 4px;
+        background-color: rgb(222, 224, 228);
+        padding: 14px 18px
+        font-family $proxyR
+        font-size 18px
+        color #383d44
+
+    .cols
+        .cols_wrapper
+            min-height 60px
+            background-color white
+            border 2px dashed #8999b1
+            margin-top: 12px
+            padding: 4px
+
+            .section
+                cursor: pointer
+                display inline-block
+                background-color: rgb(137, 153, 177);
+                padding: 6px 12px
+                color white
+                margin-right: 12px
+                margin-bottom: 6px
+
+                &:last-child
+                    margin-right: 0
+
+                &:hover
+                &:focus
+                &:active
+                    background-color: #9aadca;
+
+    .cold
+        .cold_wrapper
+            min-height 185px
+            background-color white
+            border 2px dashed #8999b1
+            margin-top: 12px
+            padding: 4px
+
+            .section
+                cursor: pointer
+                display inline-block
+                background-color: rgb(137, 153, 177);
+                padding: 6px 12px
+                color white
+                margin-right: 12px
+                margin-bottom: 6px
+
+                &:last-child
+                    margin-right: 0
+
+                &:hover
+                &:focus
+                &:active
+                    background-color: #9aadca;
+
+.table-data
+    font-family $proxyR
+    font-size 14px
+    color #262626
+
+    td
+        background-color #eff3f6 !important
+        border 1px solid #b9c5d4
+        text-align center
+        vertical-align top
+        padding: 12px 14px
+
+    .text-left
+        text-align left
+
+    .td1
+        background-color #8999b1 !important
+        color white
+        vertical-align middle
+        padding: 8px 14px
+
+    .td2
+        background-color #adb6c2 !important
+        padding: 8px 14px
+
+    .td3
+        background-color #d7dce2 !important
