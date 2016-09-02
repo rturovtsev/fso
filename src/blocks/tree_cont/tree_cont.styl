@@ -4,7 +4,7 @@
 .tree-cont
     margin-right: -14px
     opacity 0
-    transition .3s
+    transition .2s
 
     .mCustomScrollBox
         padding-right: 14px
@@ -429,10 +429,23 @@
                 bottom 0
                 background-color #4b5461;
 
+        li:last-child
+            > .tree-list__item + ul:after
+                position: absolute;
+                display: inline-block;
+                content: '';
+                width: 10px;
+                top: -6px;
+                bottom: 0;
+                left: -25px;
+                background-color: #4b5461;
+
+
 .tree-list
     .has-child > ul
         max-height 0
-        overflow hidden
+        visibility hidden
         transition .3s
     .has-child.open > ul
         max-height 1000px
+        visibility visible
