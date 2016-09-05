@@ -1,0 +1,22 @@
+doctype html
+html
+    head
+        include ./templates/head.jade
+    body
+        - var current = 2;
+
+        header
+            include ./blocks/header_logo/header_logo
+            include ./blocks/header_site_name/header_site_name
+            include ./blocks/header_user/header_user
+
+        include ./blocks/sidebar/sidebar
+
+        .content
+            .analyt-panel
+                h1
+                    |Стратегические национальные приоритеты
+
+
+
+        include ./templates/scripts.jade

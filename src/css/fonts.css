@@ -65,8 +65,20 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-map1:before {
+	content: "\e912";
+}
+.icon-map2:before {
+	content: "\e913";
+}
+.icon-map3:before {
+	content: "\e914";
+}
 .icon-save:before {
 	content: "\e904";
+}
+.icon-eye:before {
+	content: "\e915";
 }
 .icon-add2:before {
 	content: "\e90d";
@@ -80,6 +92,9 @@
 .icon-search:before {
 	content: "\e907";
 }
+.icon-save2:before {
+	content: "\e916";
+}
 .icon-dgr:before {
 	content: "\e90f";
 }
@@ -88,6 +103,15 @@
 }
 .icon-full:before {
 	content: "\e910";
+}
+.icon-chart7:before {
+	content: "\e917";
+}
+.icon-chart5:before {
+	content: "\e918";
+}
+.icon-chart4:before {
+	content: "\e919";
 }
 .icon-left:before {
 	content: "\e909";
@@ -98,14 +122,26 @@
 .icon-down:before {
 	content: "\e90b";
 }
+.icon-chart2:before {
+	content: "\e91a";
+}
 .icon-delete:before {
 	content: "\e90e";
+}
+.icon-chart6:before {
+	content: "\e91b";
 }
 .icon-chart1:before {
 	content: "\e911";
 }
 .icon-edit:before {
 	content: "\e90c";
+}
+.icon-chart3:before {
+	content: "\e91c";
+}
+.icon-analyt:before {
+	content: "\e91d";
 }
 .icon-exit:before {
 	content: "\e900";

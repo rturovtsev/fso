@@ -10,6 +10,11 @@ sidebar: [
         icon: "icon-ranks"
     },
     {
+        title: "Фналитические панели",
+        href: "/analyt.html",
+        icon: "icon-analyt"
+    },
+    {
         title: "Сми",
         href: "#",
         icon: "icon-news"

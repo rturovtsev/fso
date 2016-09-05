@@ -6,7 +6,8 @@ monitor_panel: [
         num: "5,5",
         color: "red",
         reit: "+0,3",
-        arrow: "top"
+        arrow: "top",
+        arrowColor: "green"
     },
     {
         title: "Доля населения с доходом ниже прожиточного минимуов общей численности населения РФ",
@@ -15,7 +16,8 @@ monitor_panel: [
         num: "16",
         color: "green",
         reit: "-0,3",
-        arrow: "down"
+        arrow: "down",
+        arrowColor: "green"
     },
     {
         title: "Уровень преступности",
@@ -24,7 +26,8 @@ monitor_panel: [
         num: "5,5",
         color: "yellow",
         reit: "+0,3",
-        arrow: "top"
+        arrow: "top",
+        arrowColor: "red"
     },
     {
         title: "Валовый внутренний продукт на душу наеления",
@@ -33,7 +36,8 @@ monitor_panel: [
         num: "16",
         color: "gray",
         reit: "-0,3",
-        arrow: "down"
+        arrow: "down",
+        arrowColor: "red"
     },
     {
         title: "Уровень преступности",
@@ -42,6 +46,7 @@ monitor_panel: [
         num: "5,5",
         color: "yellow",
         reit: "+0,3",
-        arrow: "top"
+        arrow: "top",
+        arrowColor: "red"
     }
 ]

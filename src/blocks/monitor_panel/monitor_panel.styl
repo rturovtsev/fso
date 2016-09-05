@@ -114,7 +114,62 @@
     color white
     font-size 11px
     margin-top 0
+    &.red
+        background #f35337
+        background linear-gradient(to bottom,  #f35337 0%,#d02d11 100%)
+    &.green
+        background #39d429
+        background linear-gradient(to bottom,  #39d429 0%,#23a116 100%)
     &.top
+        &:before
+            position absolute
+            top 9px
+            left 8px
+            content ''
+            width 0
+            height 0
+            border-left 4px solid transparent
+            border-right 4px solid transparent
+            border-bottom 6px solid white
+    &.down
+        &:before
+            position absolute
+            top 9px
+            left 6px
+            content ''
+            width 0
+            height 0
+            border-left 4px solid transparent
+            border-right 4px solid transparent
+            border-top 6px solid white
+
+    &.state0
+        background #39d429
+        background linear-gradient(to bottom,  #39d429 0%,#23a116 100%)
+        &:before
+            position absolute
+            top 9px
+            left 8px
+            content ''
+            width 0
+            height 0
+            border-left 4px solid transparent
+            border-right 4px solid transparent
+            border-bottom 6px solid white
+    &.state1
+        background #39d429
+        background linear-gradient(to bottom,  #39d429 0%,#23a116 100%)
+        &:before
+            position absolute
+            top 9px
+            left 6px
+            content ''
+            width 0
+            height 0
+            border-left 4px solid transparent
+            border-right 4px solid transparent
+            border-top 6px solid white
+    &.state2
         background #f35337
         background linear-gradient(to bottom,  #f35337 0%,#d02d11 100%)
         &:before
@@ -127,9 +182,9 @@
             border-left 4px solid transparent
             border-right 4px solid transparent
             border-bottom 6px solid white
-    &.down
-        background #39d429
-        background linear-gradient(to bottom,  #39d429 0%,#23a116 100%)
+    &.state3
+        background #f35337
+        background linear-gradient(to bottom,  #f35337 0%,#d02d11 100%)
         &:before
             position absolute
             top 9px
@@ -161,10 +216,26 @@
                 border-left-width 6px
                 border-right-width 6px
                 border-bottom-width 9px
+        &.state0
+        &.state2
+            &:before
+                top 10px
+                left 9px
+                border-left-width 6px
+                border-right-width 6px
+                border-bottom-width 9px
 
 @media (min-width: 1200px)
     .monitor-panel__reit
         &.down
+            &:before
+                top 12px
+                left 9px
+                border-left-width 6px
+                border-right-width 6px
+                border-top-width 9px
+        &.state1
+        &.state3
             &:before
                 top 12px
                 left 9px
