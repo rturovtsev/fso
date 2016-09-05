@@ -1,0 +1,9 @@
+.analyt-tabs__wrapper
+    ul.analyt-tabs.list-unstyled
+        for item, index in analyt_tabs
+            li.analyt-tab(class= (index == anal_tabs) ? "active" : "")
+                a.lnk(href="#{item.href}", id="tab#{index}")
+                    |!{item.title}
+                if index == 1 || index == 7 || index == 8 || index == 9
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="tab#{index}")
+                        |Экология живых систем и рациональное природопользование

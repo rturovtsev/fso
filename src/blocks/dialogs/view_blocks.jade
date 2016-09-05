@@ -1,0 +1,28 @@
+dialog.mdl-dialog#view-dialog
+    .mdl-dialog__header
+        h4.mdl-dialog__title Вид отображения блоков
+    .mdl-dialog__content
+        p
+            | Выберите вид разметки экрана:
+
+
+
+    .mdl-dialog__actions
+        button.mdl-button.close(type='button') Применить
+
+
+script.
+    window.onload = function() {
+        var dialog = document.querySelector('#view-dialog');
+        var showDialogButton = document.querySelector('#show-dialog');
+        if (!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+        }
+
+        dialog.showModal();
+
+        dialog.querySelector('.close').addEventListener('click', function () {
+            dialog.close();
+        });
+    };
+

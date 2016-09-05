@@ -1,0 +1,64 @@
+/*!
+* Analytics tabs
+*/
+.analyt-tabs__wrapper
+    margin: 0 -24px 15px
+
+.analyt-tabs
+    margin: 0
+    padding: 0
+    height: 61px
+    border-bottom 1px solid #2198f0
+    display table
+    table-layout fixed
+    width: 100%
+
+    .analyt-tab
+        display table-cell
+        width: 10%
+        text-align center
+        padding: 0
+        vertical-align top
+
+        .lnk
+            position: relative
+            display inline-block
+            height: 60px
+            text-decoration none
+            color #8999b1
+            font-family $myriad
+            border-bottom 3px solid transparent
+            transition .2s
+            font-size: 18px;
+            max-width: 100%;
+
+            &:after
+                position: absolute
+                left: 0
+                bottom: -3px
+                right: 0
+                display inline-block
+                content ''
+                height: 0
+                background-color #2198f0
+                transition .2s
+
+        .sp_anw
+            display block
+            overflow hidden
+            text-overflow ellipsis
+            white-space nowrap
+
+        &.active
+            .lnk
+                border-color #2198f0
+                color: #2297f0
+
+        &:hover
+            color #2198f0
+
+            .lnk
+                color #2198f0
+
+                /*&:after
+                    height: 3px*/
