@@ -11,19 +11,19 @@ module.exports = function (options) {
     if (isDevelopment) {
         return function () {
             return multipipe(
-                gulp.src([options.src, options.vend]),
-                $.if('**/main.styl', $.sourcemaps.init()),
+                gulp.src([options.src, options.blocks, options.vend]),
+                //$.if('**/main.styl', $.sourcemaps.init()),
                 $.stylus({
                     'include css': true
                 }),
-                $.if('**/main.css', $.sourcemaps.write()),
+                //$.if('**/main.css', $.sourcemaps.write()),
                 gulp.dest(options.dest)
             ).on('error', $.notify.onError());
         };
     } else {
         return function () {
             return multipipe(
-                gulp.src([options.src, options.vend]),
+                gulp.src([options.src, options.blocks, options.vend]),
                 $.stylus({
                     'include css': true
                 }),

@@ -6,31 +6,31 @@ dialog.mdl-dialog#view-dialog
         | Выберите вид разметки экрана:
 
         .dialog__views-wrapper
-            .dialog__view.view1.active
+            .dialog__view.view1(class=(view == 1) ? "active" : "")
                 span.sp1
-            .dialog__view.view2
-                span.sp1
-                span.sp2
-            .dialog__view.view3
+            .dialog__view.view2(class=(view == 2) ? "active" : "")
                 span.sp1
                 span.sp2
-            .dialog__view.view4
+            .dialog__view.view3(class=(view == 3) ? "active" : "")
                 span.sp1
                 span.sp2
-                span.sp3
-            .dialog__view.view5
+            .dialog__view.view4(class=(view == 4) ? "active" : "")
                 span.sp1
                 span.sp2
                 span.sp3
-            .dialog__view.view6
+            .dialog__view.view5(class=(view == 5) ? "active" : "")
                 span.sp1
                 span.sp2
                 span.sp3
-            .dialog__view.view7
+            .dialog__view.view6(class=(view == 6) ? "active" : "")
                 span.sp1
                 span.sp2
                 span.sp3
-            .dialog__view.view8
+            .dialog__view.view7(class=(view == 7) ? "active" : "")
+                span.sp1
+                span.sp2
+                span.sp3
+            .dialog__view.view8(class=(view == 8) ? "active" : "")
                 span.sp1
                 span.sp2
                 span.sp3
@@ -42,7 +42,7 @@ dialog.mdl-dialog#view-dialog
 
 
 script.
-    window.onload = function() {
+    $(document).ready(function() {
         var dialog = document.querySelector('#view-dialog');
 
         if (!dialog.showModal) {
@@ -52,12 +52,13 @@ script.
         dialog.showModal();
 
 
-        dialog.querySelector('#view-dialog .close').addEventListener('click', function () {
+        dialog.querySelector('.close').addEventListener('click', function () {
             dialog.close();
         });
 
-        dialog.querySelector('#view-dialog .btn-close').addEventListener('click', function () {
+        dialog.querySelector('.btn-close').addEventListener('click', function () {
             dialog.close();
         });
-    };
+    });
+
 

@@ -1,84 +1,86 @@
-doctype html
-html
-    head
-        include ./templates/head.jade
-    body
-        - var current = 1;
-        - var indicator_tabs = 6;
+extends ./templates/layout.jade
 
-        header
-            include ./blocks/header_logo/header_logo
-            include ./blocks/header_site_name/header_site_name
-            include ./blocks/header_user/header_user
+block vars
+    - var current = 1;
+    - var indicator_tabs = 6;
 
-        include ./blocks/sidebar/sidebar
+block stylesheet
+    link(rel='stylesheet', href='common/css/select.css')
+    link(rel='stylesheet', href='common/css/scroll.css')
+    link(rel='stylesheet', href='common/css/main.css')
+    link(rel='stylesheet', href='common/css/header_logo/header_logo.css')
+    link(rel='stylesheet', href='common/css/header_site_name/header_site_name.css')
+    link(rel='stylesheet', href='common/css/header_user/header_user.css')
+    link(rel='stylesheet', href='common/css/sidebar/sidebar.css')
+    link(rel='stylesheet', href='common/css/indicators_page_content/indicators_page_content.css')
+    link(rel='stylesheet', href='common/css/indicators_page_tree/indicators_page_tree.css')
+    link(rel='stylesheet', href='common/css/indicators_page_tabs/indicators_page_tabs.css')
+    link(rel='stylesheet', href='common/css/indicators_page_table_head/indicators_page_table_head.css')
+    link(rel='stylesheet', href='common/css/tree_cont/tree_cont.css')
 
-        .content
-            #indicators-tree__right.indicators-tree__right
-                include ./blocks/indicators_page_tree/indicators_page_tree
+block content
+    .content
+        #indicators-tree__right.indicators-tree__right
+            include ./blocks/indicators_page_tree/indicators_page_tree
 
-                h1
-                    | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
+            h1
+                | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
 
-                include ./blocks/indicators_page_tabs/indicators_page_tabs
+            include ./blocks/indicators_page_tabs/indicators_page_tabs
 
-                .indicators-content__scrolled-cont
+            .indicators-content__scrolled-cont
 
-                    .indicators-editor
-                        include ./blocks/indicators_page_table_head/indicators_page_table_head
+                .indicators-editor
+                    include ./blocks/indicators_page_table_head/indicators_page_table_head
 
-                    table.indicators-table
-                        tr
-                            td.name
-                                | Длина временного ряда
-                            td.value
-                                | с 2014 года
-                        tr
-                            td.name
-                                | Дата последнего обновления данных
-                            td.value
-                                | 15.03.2016
-                        tr
-                            td.name
-                                | Дата следующего (ожидаемого)
-                                | обновления
-                                .name__add-btn
-                                    button(type="button").btn
-                                        span.icon-add2
-                                        | Добавить
-                            td.value
-                                div
-                                    | 15.03.2017
-                                    button(type="button").btn
-                                        span.icon-delete
-                                        | Удалить
-                                div
-                                    | 15.04.2017
-                                    button(type="button").btn
-                                        span.icon-delete
-                                        | Удалить
-                                div
-                                    | 15.06.2018
-                                    button(type="button").btn
-                                        span.icon-delete
-                                        | Удалить
-                        tr
-                            td.name
-                                | Загруженные данные
-                            td.value
-                                div.file-item
-                                    a.lnk.exel(href="#")
-                                        | Файл №1
-                                    | &nbsp;15.03.2017
-                                div.file-item
-                                    a.lnk.exel(href="#")
-                                        | Файл №1
-                                    | &nbsp;15.04.2017
-                                div.file-item
-                                    a.lnk.exel(href="#")
-                                        | Файл №1
-                                    | &nbsp;15.06.2018
-
-
-
-        include ./templates/scripts.jade
+                table.indicators-table
+                    tr
+                        td.name
+                            | Длина временного ряда
+                        td.value
+                            | с 2014 года
+                    tr
+                        td.name
+                            | Дата последнего обновления данных
+                        td.value
+                            | 15.03.2016
+                    tr
+                        td.name
+                            | Дата следующего (ожидаемого)
+                            | обновления
+                            .name__add-btn
+                                button(type="button").btn
+                                    span.icon-add2
+                                    | Добавить
+                        td.value
+                            div
+                                | 15.03.2017
+                                button(type="button").btn
+                                    span.icon-delete
+                                    | Удалить
+                            div
+                                | 15.04.2017
+                                button(type="button").btn
+                                    span.icon-delete
+                                    | Удалить
+                            div
+                                | 15.06.2018
+                                button(type="button").btn
+                                    span.icon-delete
+                                    | Удалить
+                    tr
+                        td.name
+                            | Загруженные данные
+                        td.value
+                            div.file-item
+                                a.lnk.exel(href="#")
+                                    | Файл №1
+                                | &nbsp;15.03.2017
+                            div.file-item
+                                a.lnk.exel(href="#")
+                                    | Файл №1
+                                | &nbsp;15.04.2017
+                            div.file-item
+                                a.lnk.exel(href="#")
+                                    | Файл №1
+                                | &nbsp;15.06.2018

@@ -1,219 +1,222 @@
-doctype html
-html
-    head
-        include ./templates/head.jade
-    body
-        - var current = 1;
-        - var indicator_tabs = 0;
+extends ./templates/layout.jade
 
-        header
-            include ./blocks/header_logo/header_logo
-            include ./blocks/header_site_name/header_site_name
-            include ./blocks/header_user/header_user
+block vars
+    - var current = 1;
+    - var indicator_tabs = 0;
 
-        include ./blocks/sidebar/sidebar
+block stylesheet
+    link(rel='stylesheet', href='common/css/select.css')
+    link(rel='stylesheet', href='common/css/scroll.css')
+    link(rel='stylesheet', href='common/css/main.css')
+    link(rel='stylesheet', href='common/css/header_logo/header_logo.css')
+    link(rel='stylesheet', href='common/css/header_site_name/header_site_name.css')
+    link(rel='stylesheet', href='common/css/header_user/header_user.css')
+    link(rel='stylesheet', href='common/css/sidebar/sidebar.css')
+    link(rel='stylesheet', href='common/css/indicators_page_content/indicators_page_content.css')
+    link(rel='stylesheet', href='common/css/indicators_page_tree/indicators_page_tree.css')
+    link(rel='stylesheet', href='common/css/indicators_page_tabs/indicators_page_tabs.css')
+    link(rel='stylesheet', href='common/css/indicators_page_table_head/indicators_page_table_head.css')
+    link(rel='stylesheet', href='common/css/tree_cont/tree_cont.css')
 
-        .content
-            #indicators-tree__right.indicators-tree__right
-                include ./blocks/indicators_page_tree/indicators_page_tree
+block content
+    .content
+        #indicators-tree__right.indicators-tree__right
+            include ./blocks/indicators_page_tree/indicators_page_tree
 
-                h1
-                    | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
+            h1
+                | Количество и проявлений межэтнической и межконфессиональной напряженности на территории Российской Федерации
 
-                include ./blocks/indicators_page_tabs/indicators_page_tabs
+            include ./blocks/indicators_page_tabs/indicators_page_tabs
 
-                .indicators-content__scrolled-cont
+            .indicators-content__scrolled-cont
 
-                    .indicators-editor
-                        include ./blocks/indicators_page_table_head/indicators_page_table_head
+                .indicators-editor
+                    include ./blocks/indicators_page_table_head/indicators_page_table_head
 
-                    table.indicators-table
-                        tr
-                            th(colspan="2")
-                                | Направление национальной безопасности
-                        tr
-                            td.name
-                                | Наименование показателя
-                            td.value(contenteditable="true")
-                                | Количество прояв...
-                        tr
-                            td.name
-                                | Стратегический национальный
-                                | приоритет
-                            td.value
-                                | Государственная и общественная безопасность
-                        tr
-                            td.name
-                                | Номер пункта Перечня показателей
-                                | состояния национальной
-                                | безопасности Российской Федерации
-                            td.value(contenteditable="true")
-                                | 12.2
-                        tr
-                            td.name
-                                | Входит в состав показателя
-                            td.value
-                                a.lnk(href="#")
-                                    | 12. Уровень межэтнической и межконфессиональной напряженности на территории
-                                    | Российской Федерации
-                        tr
-                            td.name
-                                | Включает показатели
-                                .name__add-btn
-                                    button(type="button").btn
-                                        span.icon-add2
-                                        | Добавить
-                            td.value
-                                a.lnk(href="#")
-                                    | Показатель состояния нациаональной безопасности
+                table.indicators-table
+                    tr
+                        th(colspan="2")
+                            | Направление национальной безопасности
+                    tr
+                        td.name
+                            | Наименование показателя
+                        td.value(contenteditable="true")
+                            | Количество прояв...
+                    tr
+                        td.name
+                            | Стратегический национальный
+                            | приоритет
+                        td.value
+                            | Государственная и общественная безопасность
+                    tr
+                        td.name
+                            | Номер пункта Перечня показателей
+                            | состояния национальной
+                            | безопасности Российской Федерации
+                        td.value(contenteditable="true")
+                            | 12.2
+                    tr
+                        td.name
+                            | Входит в состав показателя
+                        td.value
+                            a.lnk(href="#")
+                                | 12. Уровень межэтнической и межконфессиональной напряженности на территории
+                                | Российской Федерации
+                    tr
+                        td.name
+                            | Включает показатели
+                            .name__add-btn
                                 button(type="button").btn
-                                    span.icon-delete
-                                    | Удалить
-                        tr
-                            td.name
-                                | Составной показатель
-                            td.value
-                                label.ch-label
-                                    input(type="checkbox").hide
-                                    span.sp-checkbox
-                        tr
-                            td.name
-                                | Скан копия паспорта
-                            td.value
-                                a.lnk.pdf(href="#")
-                                    | Скан_№1
+                                    span.icon-add2
+                                    | Добавить
+                        td.value
+                            a.lnk(href="#")
+                                | Показатель состояния нациаональной безопасности
+                            button(type="button").btn
+                                span.icon-delete
+                                | Удалить
+                    tr
+                        td.name
+                            | Составной показатель
+                        td.value
+                            label.ch-label
+                                input(type="checkbox").hide
+                                span.sp-checkbox
+                    tr
+                        td.name
+                            | Скан копия паспорта
+                        td.value
+                            a.lnk.pdf(href="#")
+                                | Скан_№1
+                            button(type="button").btn
+                                span.icon-delete
+                                | Удалить
+
+                table.indicators-table
+                    tr
+                        th(colspan="2")
+                            | Характеристики показателя
+                    tr
+                        td.name
+                            | Единицы измерения
+                        td.value
+                            select(style="width: 100%").select2-scrolled
+                                option
+                                    | процент
+                                option
+                                    | сантиметр
+                    tr
+                        td.name
+                            | Уровни агрегирования информации
+                            | (разрезы)
+                        td.value
+                            label.ch-label
+                                input(type="checkbox").hide
+                                span.sp-checkbox
+                                | По Российской Федерации
+
+                            label.ch-label
+                                input(type="checkbox").hide
+                                span.sp-checkbox
+                                | По федеральным округам
+
+                            label.ch-label
+                                input(type="checkbox").hide
+                                span.sp-checkbox
+                                | По субъектам РФ
+                    tr
+                        td.name
+                            | Периодичность формирования
+                            | значений показателя
+                        td.value
+                            select(style="width: 100%").select2-scrolled
+                                option
+                                    | Ежегодно
+                                option
+                                    | Ежедневно
+                    tr
+                        td.name
+                            | Срок предоставления значения
+                            | показателя
+                        td.value(contenteditable="true")
+                            | <strong>до 15 марта года, следующего за отчетным</strong> (в соответствии с постановлением Правительства Российской Федерации от 3 ноября 2012 г. № 1142 «О мерах по реализации Указа Президента Российской Федерации от 21 августа 2012 г. № 1199 «Об оценке эффективности деятельности органов исполнительной власти субъектов Российской Федерации»; распоряжением Правительства Российской Федерации от 6 мая 2008 г. № 671-р «Об утверждении Федерального плана статистических работ»)
+                    tr
+                        td.name
+                            | Гриф секретности
+                        td.value
+                            label.r-label
+                                input(type="radio", name="secrets").hide
+                                span.sp-radio
+                                | Не секретно
+
+                            label.r-label
+                                input(type="radio", name="secrets").hide
+                                span.sp-radio
+                                | Конфиденциально
+
+                            label.r-label
+                                input(type="radio", name="secrets").hide
+                                span.sp-radio
+                                | Секретно
+                    tr
+                        td.name
+                            | Методика формирования
+                            | значений
+                            .name__add-btn
                                 button(type="button").btn
-                                    span.icon-delete
-                                    | Удалить
+                                    span.icon-add2
+                                    | Добавить
+                        td.value
+                            a.lnk.word(href="#")
+                                | Файл №1
+                            button(type="button").btn
+                                span.icon-delete
+                                | Удалить
+                    tr
+                        td.name
+                            | Негативная тенденция
+                        td.value
+                            label.r-label
+                                input(type="radio", name="secrets").hide
+                                span.sp-radio
+                                | Снижение
 
-                    table.indicators-table
-                        tr
-                            th(colspan="2")
-                                | Характеристики показателя
-                        tr
-                            td.name
-                                | Единицы измерения
-                            td.value
-                                select(style="width: 100%").select2-scrolled
-                                    option
-                                        | процент
-                                    option
-                                        | сантиметр
-                        tr
-                            td.name
-                                | Уровни агрегирования информации
-                                | (разрезы)
-                            td.value
-                                label.ch-label
-                                    input(type="checkbox").hide
-                                    span.sp-checkbox
-                                    | По Российской Федерации
+                            label.r-label
+                                input(type="radio", name="secrets").hide
+                                span.sp-radio
+                                | Рост
 
-                                label.ch-label
-                                    input(type="checkbox").hide
-                                    span.sp-checkbox
-                                    | По федеральным округам
-
-                                label.ch-label
-                                    input(type="checkbox").hide
-                                    span.sp-checkbox
-                                    | По субъектам РФ
-                        tr
-                            td.name
-                                | Периодичность формирования
-                                | значений показателя
-                            td.value
-                                select(style="width: 100%").select2-scrolled
-                                    option
-                                        | Ежегодно
-                                    option
-                                        | Ежедневно
-                        tr
-                            td.name
-                                | Срок предоставления значения
-                                | показателя
-                            td.value(contenteditable="true")
-                                | <strong>до 15 марта года, следующего за отчетным</strong> (в соответствии с постановлением Правительства Российской Федерации от 3 ноября 2012 г. № 1142 «О мерах по реализации Указа Президента Российской Федерации от 21 августа 2012 г. № 1199 «Об оценке эффективности деятельности органов исполнительной власти субъектов Российской Федерации»; распоряжением Правительства Российской Федерации от 6 мая 2008 г. № 671-р «Об утверждении Федерального плана статистических работ»)
-                        tr
-                            td.name
-                                | Гриф секретности
-                            td.value
-                                label.r-label
-                                    input(type="radio", name="secrets").hide
-                                    span.sp-radio
-                                    | Не секретно
-
-                                label.r-label
-                                    input(type="radio", name="secrets").hide
-                                    span.sp-radio
-                                    | Конфиденциально
-
-                                label.r-label
-                                    input(type="radio", name="secrets").hide
-                                    span.sp-radio
-                                    | Секретно
-                        tr
-                            td.name
-                                | Методика формирования
-                                | значений
-                                .name__add-btn
-                                    button(type="button").btn
-                                        span.icon-add2
-                                        | Добавить
-                            td.value
-                                a.lnk.word(href="#")
-                                    | Файл №1
+                table.indicators-table
+                    tr
+                        th(colspan="2")
+                            | Представление информации
+                    tr
+                        td.name
+                            | Федеральные органы исполнительной <br>
+                            | власти, ответственные<br>
+                            | за предоставление информации
+                            .name__add-btn
                                 button(type="button").btn
-                                    span.icon-delete
-                                    | Удалить
-                        tr
-                            td.name
-                                | Негативная тенденция
-                            td.value
-                                label.r-label
-                                    input(type="radio", name="secrets").hide
-                                    span.sp-radio
-                                    | Снижение
-
-                                label.r-label
-                                    input(type="radio", name="secrets").hide
-                                    span.sp-radio
-                                    | Рост
-
-                    table.indicators-table
-                        tr
-                            th(colspan="2")
-                                | Представление информации
-                        tr
-                            td.name
-                                | Федеральные органы исполнительной <br>
-                                | власти, ответственные<br>
-                                | за предоставление информации
-                                .name__add-btn
-                                    button(type="button").btn
-                                        span.icon-add2
-                                        | Добавить
-                            td.value
-                                | ФСО России
-                                button(type="button").btn
-                                    span.icon-delete
-                                    | Удалить
-                        tr
-                            td.name
-                                | Контактное лицо, ответственное
-                                | за предоставление информации,
-                            td.value(contenteditable="true")
-                                | Иванов Иван Иванович
-                        tr
-                            td.name
-                                | Телефон
-                            td.value(contenteditable="true")
-                                | 8-495-111-22-33
-                        tr
-                            td.name
-                                | Электронная почта
-                            td.value(contenteditable="true")
-                                | ivanov@mail.ru
-
-
-        include ./templates/scripts.jade
+                                    span.icon-add2
+                                    | Добавить
+                        td.value
+                            | ФСО России
+                            button(type="button").btn
+                                span.icon-delete
+                                | Удалить
+                    tr
+                        td.name
+                            | Контактное лицо, ответственное
+                            | за предоставление информации,
+                        td.value(contenteditable="true")
+                            | Иванов Иван Иванович
+                    tr
+                        td.name
+                            | Телефон
+                        td.value(contenteditable="true")
+                            | 8-495-111-22-33
+                    tr
+                        td.name
+                            | Электронная почта
+                        td.value(contenteditable="true")
+                            | ivanov@mail.ru

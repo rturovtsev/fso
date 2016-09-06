@@ -1,0 +1,28 @@
+dialog.mdl-dialog#edit-widget-dialog
+    .mdl-dialog__header
+
+        .btn-close.icon-close
+    .mdl-dialog__content
+
+
+
+
+script.
+    $(document).ready(function() {
+        var dialog = document.querySelector('#edit-widget-dialog');
+        var btn = document.querySelector('.edit-widget-btn');
+
+        if (!dialog.showModal) {
+            dialogPolyfill.registerDialog(dialog);
+        }
+
+        btn.addEventListener('click', function () {
+            dialog.showModal();
+        });
+
+
+        dialog.querySelector('.btn-close').addEventListener('click', function () {
+            dialog.close();
+        });
+    });
+

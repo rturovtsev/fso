@@ -1,8 +1,12 @@
-doctype html
-html
-    head
-        include ./templates/head.jade
-    body
-        include ./blocks/auth_page/auth_page
+extends ./templates/layout.jade
 
-        include ./templates/scripts.jade
+block stylesheet
+    link(rel='stylesheet', href='common/css/main.css')
+    link(rel='stylesheet', href='common/css/auth_page/auth_page.css')
+
+block header
+
+block sidebar
+
+block content
+    include ./blocks/auth_page/auth_page

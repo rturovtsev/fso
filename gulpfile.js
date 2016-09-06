@@ -40,6 +40,7 @@ lazyRequireTask('iconfont', './tasks/iconfont.js', {
 lazyRequireTask('stylus', './tasks/stylus.js', {
     src: path.src.styleStylus,
     vend: path.src.styleStylusVendor,
+    blocks: path.src.stylusBlocks,
     dest: path.build.css
 });
 

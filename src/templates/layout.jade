@@ -1,0 +1,19 @@
+block vars
+
+doctype html
+html
+    head
+        include ./head.jade
+    body
+        block header
+            header
+                include ../blocks/header_logo/header_logo
+                include ../blocks/header_site_name/header_site_name
+                include ../blocks/header_user/header_user
+
+        block sidebar
+            include ../blocks/sidebar/sidebar
+
+        block content
+
+        include ./scripts.jade

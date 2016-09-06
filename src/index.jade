@@ -1,20 +1,18 @@
-doctype html
-html
-    head
-        include ./templates/head.jade
-    body
-        - var current = 0;
+extends ./templates/layout.jade
 
-        header
-            include ./blocks/header_logo/header_logo
-            include ./blocks/header_site_name/header_site_name
-            include ./blocks/header_user/header_user
+block vars
+    - var current = 0;
 
-        include ./blocks/sidebar/sidebar
+block stylesheet
+    link(rel='stylesheet', href='common/css/main.css')
+    link(rel='stylesheet', href='common/css/header_logo/header_logo.css')
+    link(rel='stylesheet', href='common/css/header_site_name/header_site_name.css')
+    link(rel='stylesheet', href='common/css/header_user/header_user.css')
+    link(rel='stylesheet', href='common/css/sidebar/sidebar.css')
+    link(rel='stylesheet', href='common/css/monitor_panel/monitor_panel.css')
+    link(rel='stylesheet', href='common/css/monitor_content/monitor_content.css')
 
-        .content
-            include ./blocks/monitor_panel/monitor_panel
-            include ./blocks/monitor_content/monitor_content
-
-
-        include ./templates/scripts.jade
+block content
+    .content
+        include ./blocks/monitor_panel/monitor_panel
+        include ./blocks/monitor_content/monitor_content

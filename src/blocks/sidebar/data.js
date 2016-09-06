@@ -6,12 +6,12 @@ sidebar: [
     },
     {
         title: "Показатели",
-        href: "/indicators.html",
+        href: "indicators.html",
         icon: "icon-ranks"
     },
     {
         title: "Аналитические панели",
-        href: "/analyt.html",
+        href: "analyt.html",
         icon: "icon-analyt"
     },
     {

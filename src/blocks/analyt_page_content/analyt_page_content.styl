@@ -1,0 +1,141 @@
+@import "../../css/vars"
+/*!
+* Analytics page content
+*/
+.analyt-panel
+    padding: 10px 24px
+
+    > h1
+        margin-top: 0
+        margin-bottom: 42px
+
+.analyt-navigation
+    list-style none
+    margin: 48px 0 0 0
+    padding: 0
+    text-align center
+    height: 22px
+    line-height: 22px
+
+    li
+        vertical-align middle
+        display inline-block
+        margin: 0 6px
+        width: 14px
+        height: 14px
+        border-radius 50%
+        background-color #47576f
+        cursor: pointer
+        transition .2s
+
+        &.active
+            width: 22px
+            height: 22px
+            background-color #2298f0
+
+        &:hover
+        &:focus
+            background-color #2298f0
+
+
+.analyt-widget
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    border: 1px solid rgb(230, 234, 238);
+    border-radius: 4px 4px 0 0;
+    margin-bottom: 28px
+
+    &.green
+        border-bottom 2px solid #37b147
+
+    &.red
+        border-bottom 2px solid #fc5210
+
+    &.blue
+        border-bottom 2px solid #2198f0
+
+    &.gray
+        border-bottom 2px solid #c4c4c4
+
+    &.yellow
+        border-bottom 2px solid #fbc226
+
+    &:last-child
+        margin-bottom: 0
+
+.analyt-widget__top
+    border-bottom 1px solid #e6eaee
+    padding: 26px 40px
+    background-color #fafbfc
+    overflow hidden
+
+    .widget__top_btns
+        float right
+
+        .btn
+            display inline-block
+            border 0
+            background-color transparent
+            color #9a9b9d
+            font-size 20px
+            cursor: pointer
+            vertical-align middle
+
+            &:hover
+            &:focus
+                color #2297f0
+
+
+    .widget__top_name
+        position: relative
+        display inline-block
+        font-family $proxyR
+        font-size 14px
+        color #262626
+        text-transform uppercase
+        padding-left: 20px
+
+        &:before
+            position: absolute
+            top: 50%
+            margin-top: -4px
+            left: 0
+            display inline-block
+            content ''
+            width: 8px
+            height: 8px
+            border-radius 50%
+
+            .green &
+                background-color #37b147
+
+            .red &
+                background-color #fc5210
+
+            .blue &
+                background-color #2198f0
+
+            .gray &
+                background-color #c4c4c4
+
+            .yellow &
+                background-color #fbc226
+
+.analyt-widget__content
+    padding: 20px 40px
+    background-color white
+
+.widget_county
+    display block
+    margin-right: 64px
+    margin-top: 4px
+
+    @media (min-width 1200px)
+        display inline-block
+        float right
+
+    .lnk
+        font-family $proxyR
+        font-size 12px
+        color #2399f2
+        text-decoration none
+        text-transform uppercase

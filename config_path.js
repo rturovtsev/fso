@@ -15,7 +15,7 @@ const path = {
         js: './src/js/*.js',
         styleStylus: './src/css/main.styl',
         stylusBlocks: './src/blocks/**/*.styl',
-        styleStylusVendor: './src/css/vendor.styl',
+        styleStylusVendor: './src/css/vendor/*.styl',
         img: ['./src/img/**/*.{png,jpg,ico}', './src/img/**/manifest.json'],
         svg: './src/img/svg/*.svg',
         svg_icons: './src/img/svg_icons/*.svg',
