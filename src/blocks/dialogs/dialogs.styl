@@ -13,16 +13,34 @@
     background-color rgba(19, 24, 32, 0.8) !important
 
 .mdl-dialog__header
+    position: relative
     padding: 20px 28px
     background: #1991eb;
     background: linear-gradient(to top, #2ea2f8, #1991eb);
 
     h4
         margin: 0
-        padding: 0 20px 0 0
+        padding: 0 26px 0 0
         font-size 18px
         font-family $neoM
         color white
+
+    .btn-close
+        position: absolute
+        top: 50%
+        margin-top: -8px
+        right: 32px
+        color #7bc2f7
+        cursor: pointer
+        font-size 18px
+
+        &:hover
+            color white
+
+.mdl-dialog__content
+    font-family $neoR
+    font-size 14px
+    color #7f8fa4
 
 .mdl-dialog__actions
     background-color #f0f3f8

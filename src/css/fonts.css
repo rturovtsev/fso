@@ -86,6 +86,9 @@
 .icon-add1:before {
 	content: "\e905";
 }
+.icon-close:before {
+	content: "\e91e";
+}
 .icon-cansel:before {
 	content: "\e906";
 }

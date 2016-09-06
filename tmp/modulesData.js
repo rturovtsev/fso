@@ -172,7 +172,7 @@ sidebar: [
         icon: "icon-ranks"
     },
     {
-        title: "Фналитические панели",
+        title: "Аналитические панели",
         href: "/analyt.html",
         icon: "icon-analyt"
     },
