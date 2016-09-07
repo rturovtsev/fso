@@ -3,7 +3,7 @@ extends ./templates/layout.jade
 block vars
     - var current = 2;
     - var anal_tabs = 5;
-    - var view = 1;
+    - var view = 2;
 
 block stylesheet
     link(rel='stylesheet', href='common/css/main.css')
@@ -29,7 +29,7 @@ block content
 
             include ./blocks/analyt_name_panel/analyt_name_panel
 
-            .analyt-widgets.view1
+            .analyt-widgets.view2
                 table.table-layout
                     tr
                         td
@@ -45,6 +45,17 @@ block content
                                     .widget_county
                                         a.lnk(href="#") Северо-западный федеральный округ
                                 .analyt-widget__content
+                                    br
+                                    br
+                                    br
+                                    br
+                        td.empty
+                            .add-view
+                                .add-view__circle
+                                    |+
+                                div
+                                    |Добавить представление
+
 
         ul.analyt-navigation
             li

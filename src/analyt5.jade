@@ -3,7 +3,7 @@ extends ./templates/layout.jade
 block vars
     - var current = 2;
     - var anal_tabs = 5;
-    - var view = 1;
+    - var view = 5;
 
 block stylesheet
     link(rel='stylesheet', href='common/css/main.css')
@@ -29,7 +29,7 @@ block content
 
             include ./blocks/analyt_name_panel/analyt_name_panel
 
-            .analyt-widgets.view1
+            .analyt-widgets.view5
                 table.table-layout
                     tr
                         td
@@ -45,6 +45,38 @@ block content
                                     .widget_county
                                         a.lnk(href="#") Северо-западный федеральный округ
                                 .analyt-widget__content
+                        td
+                            table.table-layout
+                                tr
+                                    td
+                                        .analyt-widget.green
+                                            .analyt-widget__top
+                                                .widget__top_name
+                                                    | Отношение населения к деятельности президента РФ
+                                                .widget__top_btns
+                                                    button.edit-widget-btn(type="button").btn
+                                                        span.icon-dgr
+                                                    button(type="button").btn
+                                                        span.icon-full
+                                                .widget_county
+                                                    a.lnk(href="#") Северо-западный федеральный округ
+                                            .analyt-widget__content
+                            table.table-layout
+                                tr
+                                    td
+                                        .analyt-widget.green
+                                            .analyt-widget__top
+                                                .widget__top_name
+                                                    | Отношение населения к деятельности президента РФ
+                                                .widget__top_btns
+                                                    button.edit-widget-btn(type="button").btn
+                                                        span.icon-dgr
+                                                    button(type="button").btn
+                                                        span.icon-full
+                                                .widget_county
+                                                    a.lnk(href="#") Северо-западный федеральный округ
+                                            .analyt-widget__content
+
 
         ul.analyt-navigation
             li

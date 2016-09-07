@@ -1,8 +1,177 @@
-dialog.mdl-dialog#edit-widget-dialog
+dialog.mdl-dialog.edit-widget-dialog#edit-widget-dialog
     .mdl-dialog__header
-
+        .widget-name
+            input.widget-name__input(placeholder="Введите название")
+        .widget__btns.pull-right
+            button(type="button").btn
+                span.btn-icon.icon-eye
+                |Показать
+            button(type="button").btn
+                span.btn-icon.icon-save2
+                | Сохранить
         .btn-close.icon-close
-    .mdl-dialog__content
+    .mdl-dialog__content.table
+        .td1
+            .table-sections
+                | Разрезы
+                .table-sections__cont
+                    .section
+                        | Вид данных
+                        .table-data__filter
+                            span.sp1
+                            span.sp2
+                            span.sp3
+                    .section
+                        | Территории
+                        .table-data__filter
+                            span.sp1
+                            span.sp2
+                            span.sp3
+                    .section
+                        | Период
+                        .table-data__filter
+                            span.sp1
+                            span.sp2
+                            span.sp3
+
+            .table-wrapper.table
+                .tcell
+                    .cols
+                        | Строки
+                        .cols_wrapper
+                            .section
+                                | Год
+                .tcell
+                    .cold
+                        | Столбцы
+                        .cold_wrapper
+                            .section
+                                | Виды деятельности
+
+            .table-data
+                table
+                    tbody
+                        tr
+                            td.td1.text-left(rowspan='2')
+                                .table-data__filter
+                                    span.sp1
+                                    span.sp2
+                                    span.sp3
+                                | Регион
+                            td.td1.text-left(rowspan='2')
+                                .table-data__filter
+                                    span.sp1
+                                    span.sp2
+                                    span.sp3
+                                | Наименование
+                            td.td1.text-left(rowspan='2')
+                                .table-data__filter
+                                    span.sp1
+                                    span.sp2
+                                    span.sp3
+                                | Орган
+                            td.td1(colspan='4') 2015 год
+                            td.td1(colspan='2') 2015 год
+                        tr
+                            td.td2 Значение
+                            td.td2 Цель
+                            td.td2 От
+                            td.td2 До
+                            td.td2 Значение
+                            td.td2 Цель
+                        tr
+                            td.td3.text-left Российская<br>Федерация
+                            td.td3.text-left Наименование<br>отдела
+                            td.td3.text-left ГРУПП
+                            td 42
+                            td 56
+                            td 56
+                            td 56
+                            td 42
+                            td 56
+                        tr
+                            td.td3.text-left ЦФО
+                            td.td3.text-left Окружной округ<br>Буравии
+                            td.td3.text-left УПП
+                            td 47
+                            td 42
+                            td 42
+                            td 42
+                            td 47
+                            td 42
+                        tr
+                            td.td3.text-left г. Москва
+                            td.td3.text-left Наименование<br>отдела
+                            td.td3.text-left ОПП
+                            td 41
+                            td 57
+                            td 57
+                            td 57
+                            td 41
+                            td 57
+                        tr
+                            td.td3.text-left Российская<br>Федерация
+                            td.td3.text-left Окружной округ<br>Буравии
+                            td.td3.text-left ХОПП
+                            td 38
+                            td 42
+                            td 42
+                            td 42
+                            td 38
+                            td 42
+                        tr
+                            td.td3.text-left ЦФО
+                            td.td3.text-left Окружной округ<br>Буравии
+                            td.td3.text-left ГРУПП
+                            td 42
+                            td 33
+                            td 33
+                            td 33
+                            td 42
+                            td 33
+                        tr
+                            td.td3.text-left г. Москва
+                            td.td3.text-left Окружной округ<br>Буравии
+                            td.td3.text-left ГРУПП
+                            td 42
+                            td 42
+                            td 42
+                            td 42
+                            td 42
+                            td 42
+        .td2
+            ul.chart-list
+                li#chart-list__item1
+                    span.sp-icon.icon-chart2
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item1") Карта состояний
+                li#chart-list__item2
+                    span.sp-icon.icon-chart3
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item2") Карта состояний
+                li#chart-list__item3
+                    span.sp-icon.icon-chart4
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item3") Карта состояний
+                li#chart-list__item4
+                    span.sp-icon.icon-chart5
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item4") Карта состояний
+                li#chart-list__item5
+                    span.sp-icon.icon-chart6
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item5") Карта состояний
+                li#chart-list__item6
+                    span.sp-icon.icon-chart7
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item6") Карта состояний
+                li#chart-list__item7.active
+                    span.sp-icon.icon-map1
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item7") Карта состояний
+                li#chart-list__item8
+                    span.sp-icon.icon-map2
+                        span.map2-num
+                            |86
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item8") Карта состояний
+                li#chart-list__item9
+                    span.sp-icon.icon-map3
+                    span.mdl-tooltip.mdl-tooltip--bottom(for="chart-list__item9") Карта состояний
+
+            .map-cont
 
 
 
@@ -10,15 +179,17 @@ dialog.mdl-dialog#edit-widget-dialog
 script.
     $(document).ready(function() {
         var dialog = document.querySelector('#edit-widget-dialog');
-        var btn = document.querySelector('.edit-widget-btn');
+        var btn = document.querySelectorAll('.edit-widget-btn');
 
         if (!dialog.showModal) {
             dialogPolyfill.registerDialog(dialog);
         }
 
-        btn.addEventListener('click', function () {
-            dialog.showModal();
-        });
+        for (i = 0; i < btn.length; i++) {
+            btn[i].addEventListener('click', function () {
+                dialog.showModal();
+            });
+        }
 
 
         dialog.querySelector('.btn-close').addEventListener('click', function () {

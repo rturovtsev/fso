@@ -37,6 +37,102 @@
         &:focus
             background-color #2298f0
 
+.analyt-widgets
+    .table-layout
+        border 0
+        margin-bottom: 28px
+
+        &:last-child
+            margin-bottom: 0
+
+        td
+            vertical-align top
+            background-color transparent !important
+
+        .empty
+            padding: 10px
+            border 2px dashed #8999b1
+            background-color #d7e4ee !important
+            text-align center
+            vertical-align middle
+
+            .add-view
+                font-family $myriad
+                color #3d495a
+                font-size 16px
+
+.analyt-widgets.view2
+.analyt-widgets.view8
+    > table
+        > tr > td
+        > tbody > tr > td
+            width: 50%
+
+            &:first-child
+                padding-right: 18px
+            &:last-child
+                padding-left: 18px
+
+.analyt-widgets.view4
+    > table
+        > tr > td
+        > tbody > tr > td
+            &:first-child
+                width: 30%
+                padding-right: 18px
+            &:last-child
+                width: 70%
+                padding-left: 18px
+
+.analyt-widgets.view5
+    > table
+        > tr > td
+        > tbody > tr > td
+            &:first-child
+                width: 70%
+                padding-right: 18px
+            &:last-child
+                width: 30%
+                padding-left: 18px
+
+.analyt-widgets.view6
+    > table:first-child
+        > tr > td
+        > tbody > tr > td
+            width: 50%
+
+            &:first-child
+                padding-right: 18px
+            &:last-child
+                padding-left: 18px
+
+.analyt-widgets.view7
+    > table:last-child
+        > tr > td
+        > tbody > tr > td
+            width: 50%
+
+            &:first-child
+                padding-right: 18px
+            &:last-child
+                padding-left: 18px
+
+.add-view__circle
+    width: 112px
+    height: 112px
+    border-radius 50%
+    display inline-block
+    background-color #2b9ff6
+    color white
+    font-size 108px
+    line-height 112px
+    margin-bottom: 34px
+    cursor: pointer
+
+    &:hover
+        background-color lightness(#2b9ff6, 50%)
+        box-shadow 0 0 6px 0 rgba(0, 0, 0, 0.2)
+
 
 .analyt-widget
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
@@ -79,6 +175,7 @@
             font-size 20px
             cursor: pointer
             vertical-align middle
+            outline none
 
             &:hover
             &:focus
@@ -128,10 +225,6 @@
     display block
     margin-right: 64px
     margin-top: 4px
-
-    @media (min-width 1200px)
-        display inline-block
-        float right
 
     .lnk
         font-family $proxyR

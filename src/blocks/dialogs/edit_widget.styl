@@ -1,3 +1,157 @@
+@import "../../css/vars"
 /*!
 * Edit widget
 */
+.edit-widget-dialog
+    width: 1696px
+    border-radius 0
+
+    .mdl-dialog__header
+        height: 76px
+        overflow hidden
+        padding-right: 98px
+        padding-top: 13px
+        padding-left: 22px
+
+        .widget__btns
+            margin-top: 4px
+
+        .btn
+            height: 40px
+            border 1px solid white
+            border-radius 4px
+            background-color transparent
+            font-size 14px
+            font-family $neoR
+            color white
+            margin-left: 8px
+            vertical-align middle
+            white-space nowrap
+            padding-right: 24px
+            padding-left: 8px;
+            cursor: pointer
+            width: 46px
+            overflow hidden
+
+            &:first-child
+                margin-left: 0
+
+            @media (min-width: 1200px)
+                width auto
+                min-width 172px
+                padding-right: 30px
+
+            &:hover
+            &:focus
+                color #0086cd
+                background-color white
+
+            .btn-icon
+                font-size: 30px;
+                margin-right: 18px;
+                vertical-align: middle;
+
+            .icon-eye
+                margin-top: 5px
+
+    .mdl-dialog__content.table
+        display table
+        width: 100%
+        padding 0
+
+        .td1
+        .td2
+            display table-cell
+
+        .td2
+            width: 754px
+            border-left 1px solid #dee0e4
+
+        .chart-list
+            display table
+            table-layout fixed
+            width: 100%
+            padding: 0
+            margin: 0
+            background-color #dee0e4
+
+            li
+                display table-cell
+                width: (100/9)%
+                margin: 0
+                padding: 0
+                height: 83px
+                border-bottom 5px solid transparent
+                color #3d495a
+                text-align center
+                vertical-align middle
+                transition .2s
+                cursor: pointer
+
+                &.active
+                    background-color white
+                    color #269bf3
+                    border-color #269bf3
+
+                &:hover
+                    background-color white
+                    color #269bf3
+
+                .sp-icon
+                    position: relative
+                    font-size 50px
+                    line-height normal
+                    height 50px
+                    overflow hidden
+
+                .icon-map1
+                .icon-map2
+                .icon-map3
+                    font-size 70px
+
+                .map2-num
+                    position: absolute
+                    display inline-block
+                    font-family $neoR
+                    font-size 13px
+                    top: 15px;
+                    left: 50%;
+                    margin-left: -6px;
+
+        .map-cont
+            padding-top: 100px
+
+        > .td1
+            padding: 20px
+
+    .btn-close
+        top: 0
+        margin-top: 0
+        right: 0
+        width: 80px
+        height: 100%
+        background-color #3d495a
+        line-height: 76px
+        text-align center
+        font-size 32px
+        color white
+        transition .2s
+
+        &:hover
+            background-color: #6a717b;
+
+    .widget-name
+        display inline-block
+        width: 56%
+
+    .widget-name__input
+        width: 100%
+        border 0
+        outline none
+        height: 50px
+        line-height: 50px
+        background-color #3488c7
+        color white
+        padding-left: 20px
+        font-size 25px
+        font-family $proxyR

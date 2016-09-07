@@ -1,0 +1,100 @@
+extends ./templates/layout.jade
+
+block vars
+    - var current = 2;
+    - var anal_tabs = 5;
+    - var view = 8;
+
+block stylesheet
+    link(rel='stylesheet', href='common/css/main.css')
+    link(rel='stylesheet', href='common/css/header_logo/header_logo.css')
+    link(rel='stylesheet', href='common/css/header_site_name/header_site_name.css')
+    link(rel='stylesheet', href='common/css/header_user/header_user.css')
+    link(rel='stylesheet', href='common/css/sidebar/sidebar.css')
+    link(rel='stylesheet', href='common/css/analyt_page_tabs/analyt_page_tabs.css')
+    link(rel='stylesheet', href='common/css/analyt_name_panel/analyt_name_panel.css')
+    link(rel='stylesheet', href='common/css/analyt_page_content/analyt_page_content.css')
+    link(rel='stylesheet', href='common/css/dialogs/dialogs.css')
+    link(rel='stylesheet', href='common/css/dialogs/view_blocks.css')
+    link(rel='stylesheet', href='common/css/dialogs/edit_widget.css')
+    link(rel='stylesheet', href='common/css/table_sections/table_sections.css')
+
+block content
+    .content
+        .analyt-panel
+            h1
+                |Стратегические национальные приоритеты
+
+            include ./blocks/analyt_page_tabs/analyt_page_tabs
+
+            include ./blocks/analyt_name_panel/analyt_name_panel
+
+            .analyt-widgets.view8
+                table.table-layout
+                    tr
+                        td
+                            .analyt-widget.red
+                                .analyt-widget__top
+                                    .widget__top_name
+                                        | Отношение населения к деятельности президента РФ
+                                    .widget__top_btns
+                                        button.edit-widget-btn(type="button").btn
+                                            span.icon-dgr
+                                        button(type="button").btn
+                                            span.icon-full
+                                    .widget_county
+                                        a.lnk(href="#") Северо-западный федеральный округ
+                                .analyt-widget__content
+                        td
+
+                            .analyt-widget.green
+                                .analyt-widget__top
+                                    .widget__top_name
+                                        | Отношение населения к деятельности президента РФ
+                                    .widget__top_btns
+                                        button.edit-widget-btn(type="button").btn
+                                            span.icon-dgr
+                                        button(type="button").btn
+                                            span.icon-full
+                                    .widget_county
+                                        a.lnk(href="#") Северо-западный федеральный округ
+                                .analyt-widget__content
+                table.table-layout
+                    tr
+                        td
+                            .analyt-widget.red
+                                .analyt-widget__top
+                                    .widget__top_name
+                                        | Отношение населения к деятельности президента РФ
+                                    .widget__top_btns
+                                        button.edit-widget-btn(type="button").btn
+                                            span.icon-dgr
+                                        button(type="button").btn
+                                            span.icon-full
+                                    .widget_county
+                                        a.lnk(href="#") Северо-западный федеральный округ
+                                .analyt-widget__content
+                        td
+
+                            .analyt-widget.green
+                                .analyt-widget__top
+                                    .widget__top_name
+                                        | Отношение населения к деятельности президента РФ
+                                    .widget__top_btns
+                                        button.edit-widget-btn(type="button").btn
+                                            span.icon-dgr
+                                        button(type="button").btn
+                                            span.icon-full
+                                    .widget_county
+                                        a.lnk(href="#") Северо-западный федеральный округ
+                                .analyt-widget__content
+
+
+        ul.analyt-navigation
+            li
+            li.active
+            li
+            li
+        include ./blocks/dialogs/view_blocks
+        include ./blocks/dialogs/edit_widget
+
