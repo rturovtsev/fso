@@ -3,8 +3,11 @@
 * Edit widget
 */
 .edit-widget-dialog
-    width: 1696px
+    width: 98%
     border-radius 0
+
+    @media (min-width: 1800px)
+        width: 1696px
 
     .mdl-dialog__header
         height: 76px
@@ -64,8 +67,11 @@
             display table-cell
 
         .td2
-            width: 754px
+            width: (75400/1700)%
             border-left 1px solid #dee0e4
+
+            @media (min-width: 1800px)
+                width: 754px
 
         .chart-list
             display table
@@ -80,13 +86,16 @@
                 width: (100/9)%
                 margin: 0
                 padding: 0
-                height: 83px
+                height: 46px
                 border-bottom 5px solid transparent
                 color #3d495a
                 text-align center
                 vertical-align middle
                 transition .2s
                 cursor: pointer
+
+                @media (min-width 1800px)
+                    height: 83px
 
                 &.active
                     background-color white
@@ -99,30 +108,44 @@
 
                 .sp-icon
                     position: relative
-                    font-size 50px
+                    font-size 26px
                     line-height normal
-                    height 50px
+                    height 24px
                     overflow hidden
+                    margin-top: 9px
+
+                    @media (min-width 1800px)
+                        font-size 50px
+                        height 50px
 
                 .icon-map1
                 .icon-map2
                 .icon-map3
-                    font-size 70px
+                    font-size 36px
+
+                    @media (min-width 1800px)
+                        font-size 70px
 
                 .map2-num
                     position: absolute
                     display inline-block
                     font-family $neoR
-                    font-size 13px
-                    top: 15px;
+                    font-size 8px
+                    top: 7px;
                     left: 50%;
-                    margin-left: -6px;
+                    margin-left: -4px;
+
+                    @media (min-width 1800px)
+                        font-size 13px
+                        top: 15px;
+                        margin-left: -6px;
 
         .map-cont
             padding-top: 100px
 
         > .td1
             padding: 20px
+            vertical-align top
 
     .btn-close
         top: 0
