@@ -65,6 +65,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-exel:before {
+	content: "\e920";
+}
+.icon-plus:before {
+	content: "\e91f";
+}
 .icon-map1:before {
 	content: "\e912";
 }
@@ -79,6 +85,9 @@
 }
 .icon-eye:before {
 	content: "\e915";
+}
+.icon-calendar:before {
+	content: "\e923";
 }
 .icon-add2:before {
 	content: "\e90d";

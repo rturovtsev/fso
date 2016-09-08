@@ -118,16 +118,21 @@
                 padding-left: 18px
 
 .add-view__circle
+    position: relative
     width: 112px
     height: 112px
     border-radius 50%
     display inline-block
     background-color #2b9ff6
     color white
-    font-size 108px
-    line-height 112px
+    font-size 80px
     margin-bottom: 34px
     cursor: pointer
+
+    .icon-plus
+        position: absolute
+        top: 17px
+        left: 17px
 
     &:hover
         background-color lightness(#2b9ff6, 50%)
