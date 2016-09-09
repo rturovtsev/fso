@@ -1,0 +1,53 @@
+extends ./templates/layout.jade
+
+block vars
+    - var current = 3;
+
+block stylesheet
+    link(rel='stylesheet', href='common/css/main.css')
+    link(rel='stylesheet', href='common/css/header_logo/header_logo.css')
+    link(rel='stylesheet', href='common/css/header_site_name/header_site_name.css')
+    link(rel='stylesheet', href='common/css/header_user/header_user.css')
+    link(rel='stylesheet', href='common/css/sidebar/sidebar.css')
+    link(rel='stylesheet', href='common/css/analyt_page_tabs/analyt_page_tabs.css')
+    link(rel='stylesheet', href='common/css/news_name_panel/news_name_panel.css')
+    link(rel='stylesheet', href='common/css/news_page_content/news_page_content.css')
+    link(rel='stylesheet', href='common/css/navigation/navigation.css')
+    link(rel='stylesheet', href='common/css/dialogs/dialogs.css')
+    link(rel='stylesheet', href='common/css/dialogs/news.css')
+
+block content
+    .content
+        .news-cont
+            h1
+                | Стратегические национальные приоритеты
+
+            include ./blocks/analyt_page_tabs/analyt_page_tabs
+
+            include ./blocks/news_name_panel/news_name_panel
+
+            .news-articles
+                for i in [1, 2]
+                    .col50p
+                        for i in [1, 2, 3]
+                            article.news-item
+                                .news-item__top
+                                    .news-item__name
+                                        | В Якутии около 100 тысяч детей охвачено <br>
+                                        | дополнительным образованием
+                                    .news-item__btns
+                                        button(type="button").btn
+                                            span.icon-full
+                                .news-item__content
+                                    |Пресс-служба Министерства образования РС (Я) Министерство образования республики 2016 год объявило Годом дополнительного образования. Сегодня 98787 детей занимаются в 227 организациях дополнительного образования республики, что составляет 73,0% из числа всех школьников, и с каждым годом количество желающих заниматься в них возрастает. "Система дополнительного образования детей имеет свою славную многолетнюю историю. Якутии есть чем гордиться в этой важной сфере", - считает министр образования республики Феодосия Габышева. Надо отметить, что с каждым годом все больше.
+                                .news-item__bottom
+                                    .news-date
+                                        |10.02.2016
+                                    .news-item__tags
+                                        a(href="#").news-item__tag Вестник саха
+                                        a(href="#").news-item__tag новости
+                                        a(href="#").news-item__tag республика саха (якутия)
+
+        include ./blocks/navigation/navigation
+
+        include ./blocks/dialogs/news

@@ -18,6 +18,7 @@ block stylesheet
     link(rel='stylesheet', href='common/css/dialogs/view_blocks.css')
     link(rel='stylesheet', href='common/css/dialogs/edit_widget.css')
     link(rel='stylesheet', href='common/css/table_sections/table_sections.css')
+    link(rel='stylesheet', href='common/css/navigation/navigation.css')
 
 block content
     .content
@@ -90,11 +91,7 @@ block content
                                 .analyt-widget__content
 
 
-        ul.analyt-navigation
-            li
-            li.active
-            li
-            li
+        include ./blocks/navigation/navigation
         include ./blocks/dialogs/view_blocks
         include ./blocks/dialogs/edit_widget
 

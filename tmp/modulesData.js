@@ -178,7 +178,7 @@ sidebar: [
     },
     {
         title: "Сми",
-        href: "#",
+        href: "news.html",
         icon: "icon-news"
     }
 ]

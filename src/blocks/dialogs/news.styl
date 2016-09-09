@@ -1,0 +1,84 @@
+@import "../../css/vars"
+/*!
+* News dialog
+*/
+.view-news-dialog
+    width: 98%
+
+    @media (min-width 1200px)
+        width: 1110px
+
+    .mdl-dialog__header
+        height: 76px;
+        overflow: hidden;
+        padding-right: 98px;
+        padding-top: 13px;
+        padding-left: 16px;
+
+        .btn-close
+            top: 0;
+            margin-top: 0;
+            right: 0;
+            width: 80px;
+            height: 100%;
+            background-color: #3d495a;
+            line-height: 76px;
+            text-align: center;
+            font-size: 32px;
+            color: #fff;
+            transition: 0.2s;
+
+            &:hover
+                background-color: #6a717b;
+
+    .view-news__edit-name
+        padding-right: 190px
+
+        .txt-area
+            width: 100%
+            height: 50px
+            background-color #3488c7
+            border 0
+            outline none
+            resize none
+            font-family $proxyR
+            font-size 18px
+            color white
+            padding-left: 20px
+
+        .view-news__btns
+            float right
+            margin-right: -190px
+            margin-top: 4px
+
+    .btn
+        height: 40px;
+        border: 1px solid #fff;
+        border-radius: 4px;
+        background-color: transparent;
+        font-size: 14px;
+        font-family: "NeoSansCyrRegular";
+        color: #fff;
+        vertical-align: middle;
+        white-space: nowrap;
+        padding-right: 24px;
+        padding-left: 8px;
+        cursor: pointer;
+        overflow: hidden;
+
+        .btn-icon
+            font-size: 30px;
+            margin-right: 18px;
+            vertical-align: middle;
+            margin-top: 4px
+
+        &:hover
+            color: #0086cd;
+            background-color: #fff;
+
+
+    .news-item__content
+        padding 10px 13px
+
+    .news-item__bottom
+        padding 0 13px 10px

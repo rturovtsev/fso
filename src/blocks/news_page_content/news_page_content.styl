@@ -1,0 +1,86 @@
+@import "../../css/vars"
+/*!
+* News page content
+*/
+.news-cont
+    padding: 10px 24px;
+
+    > h1
+        margin-top: 0
+        margin-bottom: 42px
+
+.news-articles
+    .col50p
+        vertical-align top
+
+        &:first-child
+            padding-right: 22px
+        &:last-child
+            padding-left: 22px
+
+.news-item
+    background-color white
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 46px
+
+    &:last-child
+        margin-bottom: 0
+
+.news-item__top
+    position: relative
+    border-bottom: 1px solid #e6eaee;
+    padding: 26px 80px 21px 30px;
+    background-color: #fafbfc;
+    overflow: hidden;
+
+    .news-item__name
+        display: inline-block;
+        font-family: "ProximaNovaReg";
+        font-size: 16px;
+        color: #262626;
+        text-transform: uppercase;
+
+    .news-item__btns
+        position: absolute
+        top: 50%
+        margin-top: -16px
+        right: 45px
+
+        .btn
+            display: inline-block;
+            border: 0;
+            background-color: transparent;
+            color: #9a9b9d;
+            font-size: 20px;
+            cursor: pointer;
+            vertical-align: middle;
+            outline: none;
+
+.news-item__content
+    padding: 20px 30px;
+    font-family: "ProximaNovaReg";
+    font-size: 16px;
+    color: #262626;
+
+.news-item__bottom
+    padding: 0 30px 20px 30px;
+
+    .news-date
+        font-size 12px
+        font-family: "ProximaNovaReg";
+        color: #262626;
+        font-weight bold
+
+    .news-item__tag
+        font-size 12px
+        color: #262626;
+        displya inline-block
+        padding-right: 8px
+        margin-right: 8px
+        border-right 1px solid #787878
+        text-transform uppercase
+        text-decoration none
+
+        &:last-child
+            margin-right: 0
+            border: 0
